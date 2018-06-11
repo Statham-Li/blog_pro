@@ -6,25 +6,25 @@
     
 
     
-    <title>JS函数 | Statham-Li的Blog</title>
+    <title>Jquery回顾(1) | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript" />
+        <meta name="keywords" content="javascript,温故知新" />
     
-    <meta name="description" content="1.匿名函数：不能单独写在页面内作用：赋值，传参(匿名函数可作为参数) 2.有名函数:在function后加名字(1)可加括号自执行(2)可把名字直接放在事件位置    例： 1234function a()&amp;#123;					alert(666);			  &amp;#125;	document.onclick = a; 回顾：数据类型：num String boolean null undefine">
-<meta name="keywords" content="javascript">
+    <meta name="description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
+<meta name="keywords" content="javascript,温故知新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS函数">
-<meta property="og:url" content="http://yoursite.com/2018/06/07/JS函数/index.html">
+<meta property="og:title" content="Jquery回顾(1)">
+<meta property="og:url" content="http://yoursite.com/2018/06/11/Jquery回顾-1/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="1.匿名函数：不能单独写在页面内作用：赋值，传参(匿名函数可作为参数) 2.有名函数:在function后加名字(1)可加括号自执行(2)可把名字直接放在事件位置    例： 1234function a()&amp;#123;					alert(666);			  &amp;#125;	document.onclick = a; 回顾：数据类型：num String boolean null undefine">
+<meta property="og:description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2018-06-07T06:02:52.902Z">
+<meta property="og:updated_time" content="2018-06-11T07:16:05.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS函数">
-<meta name="twitter:description" content="1.匿名函数：不能单独写在页面内作用：赋值，传参(匿名函数可作为参数) 2.有名函数:在function后加名字(1)可加括号自执行(2)可把名字直接放在事件位置    例： 1234function a()&amp;#123;					alert(666);			  &amp;#125;	document.onclick = a; 回顾：数据类型：num String boolean null undefine">
+<meta name="twitter:title" content="Jquery回顾(1)">
+<meta name="twitter:description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
     
 
@@ -144,14 +144,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-JS函数" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Jquery回顾-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        JS函数
+        Jquery回顾(1)
         </h1>
     
 
@@ -161,34 +161,43 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/blog_pro/2018/06/07/JS函数/" class="article-date">
-            <time datetime="2018-06-07T05:28:19.000Z" itemprop="datePublished">2018-06-07</time>
+        <a href="/blog_pro/2018/06/11/Jquery回顾-1/" class="article-date">
+            <time datetime="2018-06-11T07:08:13.000Z" itemprop="datePublished">2018-06-11</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog_pro/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/blog_pro/tags/javascript/">javascript</a>, <a class="tag-link" href="/blog_pro/tags/温故知新/">温故知新</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="1-匿名函数：不能单独写在页面内"><a href="#1-匿名函数：不能单独写在页面内" class="headerlink" title="1.匿名函数：不能单独写在页面内"></a>1.匿名函数：不能单独写在页面内</h3><p>作用：赋值，传参<br>(匿名函数可作为参数)</p>
-<h3 id="2-有名函数-在function后加名字"><a href="#2-有名函数-在function后加名字" class="headerlink" title="2.有名函数:在function后加名字"></a>2.有名函数:在function后加名字</h3><p>(1)可加括号自执行<br>(2)可把名字直接放在事件位置<br>    例：</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function a()&#123;</span><br><span class="line">					alert(666);</span><br><span class="line">			  &#125;</span><br><span class="line">	document.onclick = a;</span><br></pre></td></tr></table></figure>
-</code></pre><h5 id="回顾：数据类型：num-String-boolean-null-undefined-object"><a href="#回顾：数据类型：num-String-boolean-null-undefined-object" class="headerlink" title="回顾：数据类型：num String boolean null undefined object"></a>回顾：数据类型：num String boolean null undefined object</h5><h5 id="typeof-把null归为object-增加function"><a href="#typeof-把null归为object-增加function" class="headerlink" title="typeof:把null归为object,增加function"></a>typeof:把null归为object,增加function</h5><h5 id="函数表达式和函数定义的区别：函数表达式可直接加括号自执行；"><a href="#函数表达式和函数定义的区别：函数表达式可直接加括号自执行；" class="headerlink" title="函数表达式和函数定义的区别：函数表达式可直接加括号自执行；"></a>函数表达式和函数定义的区别：函数表达式可直接加括号自执行；</h5><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例：var a = function()&#123;</span><br><span class="line">					alert(1);</span><br><span class="line">				&#125;();//可执行</span><br></pre></td></tr></table></figure>
-</code></pre><h5 id="将匿名函数强转为函数表达式的方法：在前面加-位操作符-或-function-……"><a href="#将匿名函数强转为函数表达式的方法：在前面加-位操作符-或-function-……" class="headerlink" title="将匿名函数强转为函数表达式的方法：在前面加 位操作符(~  +  -  !)或(function(){……});"></a>将匿名函数强转为函数表达式的方法：在前面加 位操作符(~  +  -  !)或(function(){……});</h5><h3 id="函数参数："><a href="#函数参数：" class="headerlink" title="函数参数："></a>函数参数：</h3><h4 id="1-形参"><a href="#1-形参" class="headerlink" title="1.形参"></a>1.形参</h4><h4 id="2-实参"><a href="#2-实参" class="headerlink" title="2.实参"></a>2.实参</h4><p>ps:实参多于形参时，多出部分相当于没有，实参少于形参时，未接收到数据的形参为undefined</p>
-<h3 id="关于null和undefined"><a href="#关于null和undefined" class="headerlink" title="关于null和undefined"></a>关于null和undefined</h3><p>null指向一个空的对象地址，因此typeof将null归为object</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(null==undefined)&#123;</span><br><span class="line">						alert(1);</span><br><span class="line">					&#125;</span><br><span class="line">					else&#123;</span><br><span class="line">						alert(0);</span><br><span class="line">					&#125;//弹出1，在逻辑运算中null和undefined相等，但不全等，原因就是他们是两种不同的数据类型</span><br></pre></td></tr></table></figure>
-</code></pre><p>undefined 不报错 声明但未定义<br>is not defined 报错，未声明</p>
-<h4 id="3-不定参-arguments代表不定参数的集合"><a href="#3-不定参-arguments代表不定参数的集合" class="headerlink" title="3.不定参:arguments代表不定参数的集合"></a>3.不定参:arguments代表不定参数的集合</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">例：function fn()&#123;</span><br><span class="line">		var sum=0;</span><br><span class="line">		for (var i = 0; i &lt; arguments.length; i++) &#123;</span><br><span class="line">							sum+=arguments[i]</span><br><span class="line">						&#125;</span><br><span class="line">					alert(sum);</span><br><span class="line">				&#125;</span><br><span class="line">				fn(1,2,3,4,5);//弹出15</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="JS代码解析："><a href="#JS代码解析：" class="headerlink" title="JS代码解析："></a>JS代码解析：</h3><h4 id="第一步，解析定义，包括变量定义和函数定义，普通变量重名，后者覆盖前者。但若定义函数名和普通变量重名，函数优先级大于普通变量-var"><a href="#第一步，解析定义，包括变量定义和函数定义，普通变量重名，后者覆盖前者。但若定义函数名和普通变量重名，函数优先级大于普通变量-var" class="headerlink" title="第一步，解析定义，包括变量定义和函数定义，普通变量重名，后者覆盖前者。但若定义函数名和普通变量重名，函数优先级大于普通变量(var)"></a>第一步，解析定义，包括变量定义和函数定义，普通变量重名，后者覆盖前者。但若定义函数名和普通变量重名，函数优先级大于普通变量(var)</h4><h4 id="第二步，解析执行，除定义之外的部分，包括赋值，运算等等"><a href="#第二步，解析执行，除定义之外的部分，包括赋值，运算等等" class="headerlink" title="第二步，解析执行，除定义之外的部分，包括赋值，运算等等"></a>第二步，解析执行，除定义之外的部分，包括赋值，运算等等</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function A()&#123;</span><br><span class="line">		alert(0);</span><br><span class="line">&#125;//从上至下，先看定义，定义了函数A，再执行，执行后弹出0</span><br></pre></td></tr></table></figure>
+            <h3 id="1-循环遍历："><a href="#1-循环遍历：" class="headerlink" title="1.循环遍历："></a>1.循环遍历：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).each(function(index,ele)&#123;</span><br><span class="line">	//函数体</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换</p>
+</blockquote>
+<h3 id="2-添加css样式"><a href="#2-添加css样式" class="headerlink" title="2.添加css样式"></a>2.添加css样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).css(&#123;background:green;border:1px solid #000;&#125;)</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).css(&apos;color&apos;,&apos;red&apos;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-选择元素"><a href="#3-选择元素" class="headerlink" title="3.选择元素"></a>3.选择元素</h3><p>(1)$()里面和css选择一样，注意对选择出的一组元素，一起处理，省略循环，这里在js中是不允许的<br>(2)里面可以写css选择器、$、原生dom、jquery对象、null/undefined、函数function(){}、selector/content等<br>(3)jquery特有选择规则(选择出来的是jquery对象)<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;ul&gt;li:first&apos;);</span><br><span class="line">$(&apos;ul&gt;li:eq(2)&apos;);</span><br><span class="line">$(&apos;ul&gt;li:odd/even&apos;);//odd是奇数，even是偶数</span><br><span class="line">//也可以写成$(&apos;ul&gt;li&apos;).first()其他相同</span><br></pre></td></tr></table></figure></p>
+<p>(4)filter筛选<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).filter(function(index)&#123;</span><br><span class="line">	return index%2 == 0;</span><br><span class="line">	&#125;).css(&apos;background&apos;,red);</span><br><span class="line"></span><br><span class="line">	//筛选下标为偶数的li设置背景颜色为红色</span><br></pre></td></tr></table></figure></p>
+<p>(5)not筛选：语法与filter完全相同，但筛选规则完全相反，即筛选不满足条件的<br>(6)has筛选:找有某项子级的父元素，不一定是直接子元素，有就行<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).has(&apos;span&apos;).css(&apos;color&apos;,&apos;red&apos;);  //这里筛选的是子级有span标签的&lt;li&gt;标签，注意是&lt;li&gt;标签</span><br></pre></td></tr></table></figure></p>
+<p>(7)find筛选：被找到的元素本身<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).find(&apos;span&apos;).css(&apos;color&apos;,&apos;red&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>(8)eq筛选：选择具体下标的元素<br>(9)is筛选：是就返回true，不是返回false<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).eq(4).is(&apos;.demo&apos;);//判断下标是4的li是不是class为demo的</span><br></pre></td></tr></table></figure></p>
+<h4 id="D1-对于selector-content的解释"><a href="#D1-对于selector-content的解释" class="headerlink" title="D1:对于selector/content的解释"></a>D1:对于selector/content的解释</h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;span&apos;,&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;)</span><br></pre></td></tr></table></figure></p>
+<p>目的在于选择span，什么样的span呢？在div这个上下文之内的span都可以</p>
+<h4 id="D2-对于函数function的解释"><a href="#D2-对于函数function的解释" class="headerlink" title="D2:对于函数function的解释"></a>D2:对于函数function的解释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+<p>上面的代码会立刻执行打印到控制台</p>
+<h5 id="D2-Q1：提出一个问题，以下代码的执行顺序是什么，为什么"><a href="#D2-Q1：提出一个问题，以下代码的执行顺序是什么，为什么" class="headerlink" title="D2.Q1：提出一个问题，以下代码的执行顺序是什么，为什么"></a>D2.Q1：提出一个问题，以下代码的执行顺序是什么，为什么</h5><p>eg1:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">	console.log(777)</span><br><span class="line">&#125;</span><br><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	//答案：先输出777，再输出666，难道是因为777写在上面了？我们继续看</span><br></pre></td></tr></table></figure></p>
+<p>eg2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br><span class="line">window.onload = function()&#123;</span><br><span class="line">	console.log(777)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//答案：仍然先输出777，再输出666</span><br></pre></td></tr></table></figure></p>
+<h5 id="D2-A1-新版本的jquery将-中的函数的执行顺序调整到window-onload之后执行了，-function-中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window-onload之后"><a href="#D2-A1-新版本的jquery将-中的函数的执行顺序调整到window-onload之后执行了，-function-中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window-onload之后" class="headerlink" title="D2.A1:新版本的jquery将$()中的函数的执行顺序调整到window.onload之后执行了，$(function(){})中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window.onload之后"></a>D2.A1:新版本的jquery将$()中的函数的执行顺序调整到window.onload之后执行了，$(function(){})中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window.onload之后</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$().ready(function()&#123;</span><br><span class="line">	console.log(888)</span><br><span class="line">	&#125;)</span><br><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666)</span><br><span class="line">	&#125;)</span><br><span class="line">	//先输出888，再输出666，若调换顺序，则先输出666，再输出888</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>ps:Jquery之所以可以链式调用，是因为每次执行都返回了相应的对象</p>
+</blockquote>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = 10; //从上至下，先看定义，此时a=10,再看执行，由于alert括号内重新声明了a,所以此时a变为undefined。但若把下面的var去掉，由于少了var这一环节，所以程序报错</span><br></pre></td></tr></table></figure>
-</code></pre>
         </div>
         <footer class="article-footer">
             
@@ -315,20 +324,10 @@
         
 <nav id="article-nav">
     
-        <a href="/blog_pro/2018/06/09/网络协议-1/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            网络协议(1)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/blog_pro/2018/06/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/06/09/网络协议-1/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Hello World</p>
+        <p class="article-nav-title">网络协议(1)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -508,7 +507,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/06/07/JS函数/';
+    var disqus_url = 'http://yoursite.com/2018/06/11/Jquery回顾-1/';
     
     (function() {
     var dsq = document.createElement('script');
