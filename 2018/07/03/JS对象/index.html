@@ -21,7 +21,7 @@
 <meta property="og:description" content="举例描述我心目中的对象！！(一只狗的独白，委屈巴巴)1234567891011121314151617//咳咳！敲黑板var Boyfriend = &amp;#123;	name:&amp;quot;unknow&amp;quot;,	age:&amp;quot;unknow&amp;quot;,	sex:&amp;quot;male&amp;quot;,	height:&amp;quot;180+&amp;quot;,	weight:&amp;quot;不胖&amp;quot;,">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2018-07-03T10:02:58.209Z">
+<meta property="og:updated_time" content="2018-07-04T03:27:29.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS对象">
 <meta name="twitter:description" content="举例描述我心目中的对象！！(一只狗的独白，委屈巴巴)1234567891011121314151617//咳咳！敲黑板var Boyfriend = &amp;#123;	name:&amp;quot;unknow&amp;quot;,	age:&amp;quot;unknow&amp;quot;,	sex:&amp;quot;male&amp;quot;,	height:&amp;quot;180+&amp;quot;,	weight:&amp;quot;不胖&amp;quot;,">
@@ -185,7 +185,7 @@
 <h4 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h4><p><em>ps:原始值不可以有属性和方法</em><br>数字(num)、字符串(string)、布尔值(boolean)<br>以上三种数据类型可有两种形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var num = new number(123);</span><br><span class="line">var str = new String(&apos;abcd&apos;);</span><br><span class="line">var bol = new Boolean(&apos;true&apos;);</span><br></pre></td></tr></table></figure></p>
 <p>上述形式会将原始值转为对象<br><strong>注意</strong>当对象类型的num进行运算后，会变为原始值<br><strong>Q1:既然原始值不能有属性和方法，那么<font color="#f60">str.length</font>是怎么回事呢？</strong><br>来看一个例子<br>eg1:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//	包装类</span><br><span class="line">var num = 4;</span><br><span class="line">num.len = 3;</span><br><span class="line">//  ****执行过程：new Number(4).len = 3;    delete(系统发现原来的是原始值，不可以有属性，所以new一个，尽量满足需求，但num对象上本身没有len属性，则删除new出来的对象，此过程不影响原来的num)****</span><br><span class="line">//  ****new Number(4).len -&gt;返回undefined，因为Number上并没有自带len属性，但此时的num和上一行的num不同****</span><br><span class="line">console.log(num.len)</span><br></pre></td></tr></table></figure></p>
 <p>eg2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//包装类</span><br><span class="line">var str = &quot;1234&quot;;</span><br><span class="line">str.length = 2;</span><br><span class="line">//****执行过程：new String(&quot;1234&quot;).length = 2;  delete****</span><br><span class="line">//new String(&quot;1234&quot;).length  -&gt; 返回 4</span><br></pre></td></tr></table></figure></p>
-<p><font color="red">来看一道面试题(记录自己摔的贼惨的深坑)</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abc&quot;;</span><br><span class="line">str += 1;</span><br><span class="line">var test = typeof(str);//test == &quot;string&quot;</span><br><span class="line">if(test.length == 6)&#123;</span><br><span class="line">	test.sign = &quot;typeof的返回结果可能是String&quot;;</span><br><span class="line">	//前面不多说，都知道能走进来</span><br><span class="line">	//上面那句的test是个原始值啊，原始值啊，原始值啊！哪来的sign啊，当然是下面这样啦！</span><br><span class="line">	//new String(test).sign = &apos;xxx&apos;;    delete</span><br><span class="line">&#125;</span><br><span class="line">console.log(test.sign)//new String(test).sign</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">来看一道面试题(记录自己摔的贼惨的深坑)</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;abc&quot;;</span><br><span class="line">str += 1;</span><br><span class="line">var test = typeof(str);//test == &quot;string&quot;</span><br><span class="line">if(test.length == 6)&#123;</span><br><span class="line">	test.sign = &quot;typeof的返回结果可能是String&quot;;</span><br><span class="line">	//前面不多说，都知道能走进来</span><br><span class="line">	//上面那句的test是个原始值啊，原始值啊，原始值啊！哪来的sign啊，当然是下面这样啦！</span><br><span class="line">	//new String(test).sign = &apos;xxx&apos;;    delete</span><br><span class="line">&#125;</span><br><span class="line">console.log(test.sign)//new String(test).sign  -&gt;打印undefined</span><br></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -313,6 +313,16 @@
         
 <nav id="article-nav">
     
+        <a href="/blog_pro/2018/07/04/原型那点事儿/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            原型那点事儿
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/blog_pro/2018/06/17/网络协议-2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -334,6 +344,26 @@
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog_pro/2018/07/04/原型那点事儿/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg)" alt="原型那点事儿" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog_pro/2018/07/04/原型那点事儿/" class="title">原型那点事儿</a></p>
+                            <p class="item-date"><time datetime="2018-07-04T02:15:33.000Z" itemprop="datePublished">2018-07-04</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -415,26 +445,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/blog_pro/2018/06/07/JS函数/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg)" alt="JS函数" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/blog_pro/2018/06/07/JS函数/" class="title">JS函数</a></p>
-                            <p class="item-date"><time datetime="2018-06-07T05:28:19.000Z" itemprop="datePublished">2018-06-07</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -447,7 +457,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog_pro/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog_pro/archives/2018/06/">六月 2018</a><span class="archive-list-count">5</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog_pro/archives/2018/07/">七月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog_pro/archives/2018/06/">六月 2018</a><span class="archive-list-count">5</span></li></ul>
         </div>
     </div>
 
@@ -457,7 +467,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/javascript/">javascript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/温故知新/">温故知新</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/网络协议/">网络协议</a><span class="tag-list-count">2</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/温故知新/">温故知新</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog_pro/tags/网络协议/">网络协议</a><span class="tag-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -467,7 +477,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/blog_pro/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/blog_pro/tags/温故知新/" style="font-size: 10px;">温故知新</a> <a href="/blog_pro/tags/网络协议/" style="font-size: 10px;">网络协议</a>
+            <a href="/blog_pro/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/blog_pro/tags/温故知新/" style="font-size: 15px;">温故知新</a> <a href="/blog_pro/tags/网络协议/" style="font-size: 10px;">网络协议</a>
         </div>
     </div>
 
