@@ -6,25 +6,25 @@
     
 
     
-    <title>Jquery回顾(1) | Statham-Li的Blog</title>
+    <title>原型那点事儿(1) | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="javascript,温故知新" />
     
-    <meta name="description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
+    <meta name="description" content="定义：原型是function对象的一个属性，它定义了构造函数制造出来的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。obj.prototype  –原型 利用原型特点和概念，可以提取共有属性eg:123456789Car.prototype.height = 1400;//统一属性放在原型中Car.prototype.lang = 4900;Car.proto">
 <meta name="keywords" content="javascript,温故知新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jquery回顾(1)">
-<meta property="og:url" content="http://yoursite.com/2018/06/11/Jquery回顾-1/index.html">
+<meta property="og:title" content="原型那点事儿(1)">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/原型那点事儿(1)/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
+<meta property="og:description" content="定义：原型是function对象的一个属性，它定义了构造函数制造出来的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。obj.prototype  –原型 利用原型特点和概念，可以提取共有属性eg:123456789Car.prototype.height = 1400;//统一属性放在原型中Car.prototype.lang = 4900;Car.proto">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2018-06-11T09:00:33.445Z">
+<meta property="og:updated_time" content="2018-07-04T09:27:44.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jquery回顾(1)">
-<meta name="twitter:description" content="1.循环遍历：123$(&amp;apos;obj&amp;apos;).each(function(index,ele)&amp;#123;	//函数体&amp;#125;)  有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换  2.添加css样式1$(&amp;apos;obj&amp;apos">
+<meta name="twitter:title" content="原型那点事儿(1)">
+<meta name="twitter:description" content="定义：原型是function对象的一个属性，它定义了构造函数制造出来的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。obj.prototype  –原型 利用原型特点和概念，可以提取共有属性eg:123456789Car.prototype.height = 1400;//统一属性放在原型中Car.prototype.lang = 4900;Car.proto">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
     
 
@@ -144,14 +144,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-Jquery回顾-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-原型那点事儿(1)" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Jquery回顾(1)
+        原型那点事儿(1)
         </h1>
     
 
@@ -161,8 +161,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/blog_pro/2018/06/11/Jquery回顾-1/" class="article-date">
-            <time datetime="2018-06-11T07:08:13.000Z" itemprop="datePublished">2018-06-11</time>
+        <a href="/blog_pro/2018/07/04/原型那点事儿(1)/" class="article-date">
+            <time datetime="2018-07-04T02:15:33.000Z" itemprop="datePublished">2018-07-04</time>
         </a>
     </div>
 
@@ -176,34 +176,14 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="1-循环遍历："><a href="#1-循环遍历：" class="headerlink" title="1.循环遍历："></a>1.循环遍历：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).each(function(index,ele)&#123;</span><br><span class="line">	//函数体</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>有趣的是js中的循环遍历方法比如forEach()的参数为① ele ② index，而jq中循环遍历方法比如each()、filter()、not()的参数为① index ② ele 刚好调换</p>
-</blockquote>
-<h3 id="2-添加css样式"><a href="#2-添加css样式" class="headerlink" title="2.添加css样式"></a>2.添加css样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).css(&#123;background:green;border:1px solid #000;&#125;)</span><br></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;obj&apos;).css(&apos;color&apos;,&apos;red&apos;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-选择元素"><a href="#3-选择元素" class="headerlink" title="3.选择元素"></a>3.选择元素</h3><p>(1)$()里面和css选择一样，注意对选择出的一组元素，一起处理，省略循环，这里在js中是不允许的<br>(2)里面可以写css选择器、$、原生dom、jquery对象、null/undefined、函数function(){}、selector/content等<br>(3)jquery特有选择规则(选择出来的是jquery对象)<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;ul&gt;li:first&apos;);</span><br><span class="line">$(&apos;ul&gt;li:eq(2)&apos;);</span><br><span class="line">$(&apos;ul&gt;li:odd/even&apos;);//odd是奇数，even是偶数</span><br><span class="line">//也可以写成$(&apos;ul&gt;li&apos;).first()其他相同</span><br></pre></td></tr></table></figure></p>
-<p>(4)filter筛选<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).filter(function(index)&#123;</span><br><span class="line">	return index%2 == 0;</span><br><span class="line">	&#125;).css(&apos;background&apos;,red);</span><br><span class="line"></span><br><span class="line">	//筛选下标为偶数的li设置背景颜色为红色</span><br></pre></td></tr></table></figure></p>
-<p>(5)not筛选：语法与filter完全相同，但筛选规则完全相反，即筛选不满足条件的<br>(6)has筛选:找有某项子级的父元素，不一定是直接子元素，有就行<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).has(&apos;span&apos;).css(&apos;color&apos;,&apos;red&apos;);  //这里筛选的是子级有span标签的&lt;li&gt;标签，注意是&lt;li&gt;标签</span><br></pre></td></tr></table></figure></p>
-<p>(7)find筛选：被找到的元素本身<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).find(&apos;span&apos;).css(&apos;color&apos;,&apos;red&apos;);</span><br></pre></td></tr></table></figure></p>
-<p>(8)eq筛选：选择具体下标的元素<br>(9)is筛选：是就返回true，不是返回false<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;li&apos;).eq(4).is(&apos;.demo&apos;);//判断下标是4的li是不是class为demo的</span><br></pre></td></tr></table></figure></p>
-<h4 id="D1-对于selector-content的解释"><a href="#D1-对于selector-content的解释" class="headerlink" title="D1:对于selector/content的解释"></a>D1:对于selector/content的解释</h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;span&apos;,&apos;div&apos;).css(&apos;background&apos;,&apos;red&apos;)</span><br></pre></td></tr></table></figure></p>
-<p>目的在于选择span，什么样的span呢？在div这个上下文之内的span都可以</p>
-<h4 id="D2-对于函数function的解释"><a href="#D2-对于函数function的解释" class="headerlink" title="D2:对于函数function的解释"></a>D2:对于函数function的解释</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
-<p>上面的代码会立刻执行打印到控制台</p>
-<h5 id="D2-Q1：提出一个问题，以下代码的执行顺序是什么，为什么"><a href="#D2-Q1：提出一个问题，以下代码的执行顺序是什么，为什么" class="headerlink" title="D2.Q1：提出一个问题，以下代码的执行顺序是什么，为什么"></a>D2.Q1：提出一个问题，以下代码的执行顺序是什么，为什么</h5><p>eg1:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">	console.log(777)</span><br><span class="line">&#125;</span><br><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	//答案：先输出777，再输出666，难道是因为777写在上面了？我们继续看</span><br></pre></td></tr></table></figure></p>
-<p>eg2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666);</span><br><span class="line">	&#125;)</span><br><span class="line">window.onload = function()&#123;</span><br><span class="line">	console.log(777)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//答案：仍然先输出777，再输出666</span><br></pre></td></tr></table></figure></p>
-<h5 id="D2-A1-新版本的jquery将-中的函数的执行顺序调整到window-onload之后执行了，-function-中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window-onload之后"><a href="#D2-A1-新版本的jquery将-中的函数的执行顺序调整到window-onload之后执行了，-function-中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window-onload之后" class="headerlink" title="D2.A1:新版本的jquery将$()中的函数的执行顺序调整到window.onload之后执行了，$(function(){})中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window.onload之后"></a>D2.A1:新版本的jquery将$()中的函数的执行顺序调整到window.onload之后执行了，$(function(){})中调用了jq自己定义的ready方法，以下两种方法没有区别，谁写在上边谁先执行，但都在window.onload之后</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$().ready(function()&#123;</span><br><span class="line">	console.log(888)</span><br><span class="line">	&#125;)</span><br><span class="line">$(function()&#123;</span><br><span class="line">	console.log(666)</span><br><span class="line">	&#125;)</span><br><span class="line">	//先输出888，再输出666，若调换顺序，则先输出666，再输出888</span><br></pre></td></tr></table></figure>
-<h3 id="4-jQuery函数写法"><a href="#4-jQuery函数写法" class="headerlink" title="4.jQuery函数写法"></a>4.jQuery函数写法</h3><p>当js和jq同时使用时需注意，只有js对象可以调用js方法，只有jq对象可以调用jq方法，交叉调用是不可以的，因此有些时候需要将js对象转变为jq对象，有时候也需要将jq对象转变为js对象</p>
-<h4 id="1-jquery-dom元素方法——get-方法：将jq对象转变为js对象，返回dom"><a href="#1-jquery-dom元素方法——get-方法：将jq对象转变为js对象，返回dom" class="headerlink" title="[1]jquery dom元素方法——get()方法：将jq对象转变为js对象，返回dom"></a>[1]jquery dom元素方法——get()方法：将jq对象转变为js对象，返回dom</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).get(index)</span><br></pre></td></tr></table></figure>
-<h4 id="2-取值赋值函数统一性"><a href="#2-取值赋值函数统一性" class="headerlink" title="[2].取值赋值函数统一性"></a>[2].取值赋值函数统一性</h4><p>html();text();css();attr();prop();<br>以上函数如果传值，即为赋值，若不传值，即为取值<br>css()取值相当于getComputed,赋值相当于dom.style.xxx，css()赋值赋一组，取值取一个(第一个 颜色会在内部转换成rgb)</p>
-<blockquote>
-<p>attr()函数主要依赖的是Element对象中getAttribute()和setAttribute()两个方法。<br>prop()函数主要依赖的则是js原生对象属性获取和设置方式<br>jQuery认为：attribute的checked、selected、disabled就是表示该属性初始状态的值，property的checked、selected、disabled才表示该属性实时状态的值(true/false)</p>
-</blockquote>
-<h4 id="3-dom操作"><a href="#3-dom操作" class="headerlink" title="[3].dom操作"></a>[3].dom操作</h4><p>(1)$(obj).next()下一个兄弟节点<br>(2)$(obj).prev()上一个兄弟节点<br>(3)$(obj).index()当前这个节点在兄弟节点中的索引(若之前返回的对象是一组数据则从第一个开始返回)</p>
-<blockquote>
-<p>ps:Jquery之所以可以链式调用，是因为每次执行都返回了相应的对象</p>
-</blockquote>
+            <h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><p>原型是function对象的一个属性，它定义了构造函数制造出来的对象的公共祖先。通过该构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。<br><em>obj.prototype  –原型</em></p>
+<h4 id="利用原型特点和概念，可以提取共有属性"><a href="#利用原型特点和概念，可以提取共有属性" class="headerlink" title="利用原型特点和概念，可以提取共有属性"></a>利用原型特点和概念，可以提取共有属性</h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Car.prototype.height = 1400;//统一属性放在原型中</span><br><span class="line">Car.prototype.lang = 4900;</span><br><span class="line">Car.prototype.carName = &quot;BMW&quot;;</span><br><span class="line">function Car(color,owner)&#123;</span><br><span class="line">	this.owner = owner;</span><br><span class="line">	this.color = color;</span><br><span class="line">&#125;</span><br><span class="line">var car = new Car(&apos;red&apos;,&apos;LBW&apos;);</span><br><span class="line">var car1 = new Car(&apos;green&apos;,&apos;xxx&apos;);</span><br></pre></td></tr></table></figure></p>
+<h4 id="原型的增、删、改、查"><a href="#原型的增、删、改、查" class="headerlink" title="原型的增、删、改、查"></a>原型的增、删、改、查</h4><p>1.修改属性：obj.prototype.属性名 = “xxx”;<br>2.查找属性：obj.prototype.属性名;<br>3.增加属性：obj.prototype.新属性名 = “xxx”;<br>4.删除属性：通过delete(不能通过对象操作原型)</p>
+<h4 id="查看对象的构造函数-constructor"><a href="#查看对象的构造函数-constructor" class="headerlink" title="查看对象的构造函数   constructor"></a>查看对象的构造函数   constructor</h4><p>constructor属性是系统给每个对象自带的属性，记录了这个对象的构造函数，可以手动修改</p>
+<h4 id="隐式属性-proto"><a href="#隐式属性-proto" class="headerlink" title="隐式属性__proto__"></a>隐式属性__proto__</h4><p>我们之前说，一个对象创建出来，会默认创建一个空对象，但实际上，里边是有系统自带的属性的，当我们找一个对象上的属性不是该对象自身就有的时候，会通过__proto__找到该原型。也可手动修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var this = &#123;</span><br><span class="line">	__proto__:Object.prototype</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>eg1:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype.name = &apos;sunny&apos;;</span><br><span class="line">function Person()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var person = new Person();</span><br><span class="line">Person.prototype.name=&apos;cherry&apos;</span><br><span class="line">console.log(person.name)//结果为cherry,不为sunny,直接操作了属性</span><br></pre></td></tr></table></figure></p>
+<p>eg2:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype.name = &apos;sunny&apos;;</span><br><span class="line">function person()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var person = new Person();</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	name:&apos;cherry&apos;</span><br><span class="line">&#125;</span><br><span class="line">console.log(person.name)//结果为sunny，不为cherry，已经创建对象之后又修改原型</span><br></pre></td></tr></table></figure></p>
+<p>eg3:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Person.prototype.name = &apos;sunny&apos;;</span><br><span class="line">function person()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	name:&apos;cherry&apos;</span><br><span class="line">&#125;</span><br><span class="line">var person = new Person();</span><br><span class="line">console.log(person.name)//结果为cherry，更改原型之后才创建对象</span><br></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
@@ -331,20 +311,10 @@
         
 <nav id="article-nav">
     
-        <a href="/blog_pro/2018/06/17/网络协议-2/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            网络协议(2)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/blog_pro/2018/06/09/网络协议-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/07/03/JS对象/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">网络协议(1)</p>
+        <p class="article-nav-title">JS对象</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -544,7 +514,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/06/11/Jquery回顾-1/';
+    var disqus_url = 'http://yoursite.com/2018/07/04/原型那点事儿(1)/';
     
     (function() {
     var dsq = document.createElement('script');
