@@ -10,10 +10,10 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript,js基础,温故知新" />
+        <meta name="keywords" content="javascript,温故知新,js基础" />
     
     <meta name="description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
-<meta name="keywords" content="javascript,js基础,温故知新">
+<meta name="keywords" content="javascript,温故知新,js基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原型那点事儿(2)">
 <meta property="og:url" content="http://yoursite.com/2018/07/04/原型那点事儿-2/index.html">
@@ -21,7 +21,7 @@
 <meta property="og:description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2018-07-04T13:16:49.629Z">
+<meta property="og:updated_time" content="2018-07-05T08:12:39.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型那点事儿(2)">
 <meta name="twitter:description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
@@ -178,6 +178,11 @@
         <div class="article-entry" itemprop="articleBody">
             <h5 id="我们知道对象有原型，但细心一点的童鞋会发现，原型还有-proto-属性，这是为啥呢，哈，我们来看看原型链"><a href="#我们知道对象有原型，但细心一点的童鞋会发现，原型还有-proto-属性，这是为啥呢，哈，我们来看看原型链" class="headerlink" title="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链"></a>我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链</h5><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Grandpa.prototype.lastName = &quot;James&quot;;</span><br><span class="line">function Grandpa()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var grand = new Grand();</span><br><span class="line">Father.prototype = grand;</span><br><span class="line">function Father()&#123;</span><br><span class="line">	this.name = &apos;LeBron&apos;</span><br><span class="line">&#125;</span><br><span class="line">var father = new Father();</span><br><span class="line">Son.prototype = father;</span><br><span class="line">function Son()&#123;</span><br><span class="line">	this.hobby = &quot;smoke&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var son = new Son();</span><br></pre></td></tr></table></figure></p>
 <p>我们打印son.lastName  会显示”James”，当然了，Grandpa.prototype绝不是终点，当我们打印Grandpa.prototype.__proto__时，会发现它指向Object.prototype，Object.prototype是原型链顶层</p>
+<h4 id="Object-create-原型-创建对象"><a href="#Object-create-原型-创建对象" class="headerlink" title="Object.create(原型)创建对象"></a>Object.create(原型)创建对象</h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">	name: &quot;sunny&quot;,</span><br><span class="line">	age: 123</span><br><span class="line">&#125;;</span><br><span class="line">var obj1 = Object.create(obj);//将原型设为obj，因此obj1就有了name和age属性</span><br></pre></td></tr></table></figure></p>
+<p><em><font color="red">绝大多数</font>对象的最终都会继承自Object.prototype  (√)</em><br>原因：<br><img src="/blog_pro/2018/07/04/原型那点事儿-2/create.png"><br>我们发现()中可以填null，当填入null时，该对象没有原型，__proto__这个属性，如果系统给了，你可以改，如果系统没给，手动添加无效<br><img src="/blog_pro/2018/07/04/原型那点事儿-2/noproto.png"></p>
+<h4 id="关于toString-这个方法"><a href="#关于toString-这个方法" class="headerlink" title="关于toString()这个方法"></a>关于toString()这个方法</h4><p>我们知道不同类型的变量调用toString()这个方法的返回值是不同的<br>1.num <img src="/blog_pro/2018/07/04/原型那点事儿-2/num.png"><br>2.boolean <img src="/blog_pro/2018/07/04/原型那点事儿-2/boo.png"><br>3.object <img src="/blog_pro/2018/07/04/原型那点事儿-2/obj.png"></p>
+<p>以num为例，还原整个过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var num = 123;</span><br><span class="line">//num.toString(); --&gt; new Number(num).toString();此时是在Number原型上找</span><br><span class="line">//Number.prototype.toString = function()&#123;...&#125;  但是吧Number原型上并没有所以就顺着原型链继续找</span><br><span class="line">//Number.prototype.__proto__ = Object.prototype;  此时Object原型上有toString方法了</span><br><span class="line">//但是我们看到了，Obj和num调用toString()方法返回的东西不同，这就说明，Number重写了Object原型上的toString()方法</span><br><span class="line">num.toString();//&quot;123&quot;</span><br></pre></td></tr></table></figure></p>
+<p><font color="red"><em>ps:有一点需要注意的是，document.write()这个方法在调用时，会默认调用toString()方法，因此如果写成如下形式，会报错，因为没有原型的obj没有toString()方法</em></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = Object.creat(null);</span><br><span class="line">document.write(obj);//()中实际上是obj.toString()</span><br></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
