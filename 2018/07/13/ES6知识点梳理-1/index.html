@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="ES6" />
     
-    <meta name="description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。">
+    <meta name="description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。在ES6中新增加了let和const方法 let命令   1.let命令的用法类似于var，但是所声明的变量只在let命令所在代码块中起作用   2.let不想var那样会发生”变量提升”，因此变量一定要在声明后使用，否则报错   3.let不允许在相同作用域内重复声明同一个变量ps:">
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6知识点梳理(1)">
 <meta property="og:url" content="http://yoursite.com/2018/07/13/ES6知识点梳理-1/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。">
+<meta property="og:description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。在ES6中新增加了let和const方法 let命令   1.let命令的用法类似于var，但是所声明的变量只在let命令所在代码块中起作用   2.let不想var那样会发生”变量提升”，因此变量一定要在声明后使用，否则报错   3.let不允许在相同作用域内重复声明同一个变量ps:">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img.mukewang.com/5a97d4000001d97906000338-240-135.jpg">
-<meta property="og:updated_time" content="2018-07-13T15:57:31.070Z">
+<meta property="og:updated_time" content="2018-07-15T10:27:58.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6知识点梳理(1)">
-<meta name="twitter:description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。">
+<meta name="twitter:description" content="let const 和 var   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。在ES6中新增加了let和const方法 let命令   1.let命令的用法类似于var，但是所声明的变量只在let命令所在代码块中起作用   2.let不想var那样会发生”变量提升”，因此变量一定要在声明后使用，否则报错   3.let不允许在相同作用域内重复声明同一个变量ps:">
 <meta name="twitter:image" content="https://img.mukewang.com/5a97d4000001d97906000338-240-135.jpg">
     
 
@@ -176,7 +176,12 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h4 id="let-const-和-var"><a href="#let-const-和-var" class="headerlink" title="let const 和 var"></a>let const 和 var</h4><p>   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。</p>
+            <h4 id="let-const-和-var"><a href="#let-const-和-var" class="headerlink" title="let const 和 var"></a>let const 和 var</h4><p>   ES5中的变量声明方式有var和function，一个声明变量，一个声明函数。在ES6中新增加了let和const方法</p>
+<h4 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h4><p>   1.let命令的用法类似于var，但是所声明的变量只在let命令所在代码块中起作用<br>   2.let不想var那样会发生”变量提升”，因此变量一定要在声明后使用，否则报错<br>   3.let不允许在相同作用域内重复声明同一个变量<br><em>ps:ES6明确规定如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成了封闭作用域。只要在声明之前使用这些变量就会报错(暂时性死区)</em></p>
+<h4 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h4><p>   为什么要有块级作用域？<br>   1.内层变量覆盖外层变量造成全局污染<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var tmp = new Date();</span><br><span class="line">function f()&#123;</span><br><span class="line">	console.log(tmp);</span><br><span class="line">	if(false)&#123;</span><br><span class="line">		var tmp = &quot;hello world&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">f()//undefined           变量提升导致内层tmp变量覆盖了外层tmp变量</span><br></pre></td></tr></table></figure></p>
+<p>ES6块级作用域中，外层作用域无法读取内层作用域的变量，内层作用域可以定义外层作用域的同名变量</p>
+<h4 id="const命令"><a href="#const命令" class="headerlink" title="const命令"></a>const命令</h4><p>   const命令用来声明常量，一旦声明，其值不能改变，因此const一旦声明，就必须立即初始化，不能留到以后赋值，与let一样，const也不可重复声明变量，对于复合类型的变量，变量名不指向数据，而是指向数据所在的地址。const命令只是保证变量名指向的地址不变，并不能保证该地址的数据不变，所以将一个对象声明为常量必须非常小心</p>
+<p><font color="red"><em>ps:let命令、const命令、class命令声明的全局变量不属于全局对象的属性</em></font><br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br><span class="line">window.a  //  1</span><br><span class="line">let b = 1;</span><br><span class="line">window.b  //  undefined</span><br><span class="line">//a由var声明，所以是全局对象的属性，而b由let声明，所以不是全局变量的属性，返回undefined</span><br></pre></td></tr></table></figure></p>
 
         </div>
         <footer class="article-footer">
