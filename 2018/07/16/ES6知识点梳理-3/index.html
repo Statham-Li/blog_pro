@@ -6,26 +6,26 @@
     
 
     
-    <title>原型那点事儿(2) | Statham-Li的Blog</title>
+    <title>ES6知识点梳理(3) | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="温故知新,javascript,js基础" />
+        <meta name="keywords" content="ES6,温故知新" />
     
-    <meta name="description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
-<meta name="keywords" content="温故知新,javascript,js基础">
+    <meta name="description" content="mapObject提供了“字符串-值”的对应，而map提供了“值-值”的对应，是一种更完善的Hash结构实现。 map可以接受一个数组作为参数，该数组的成员是一个个表示键值对的数组eg:123456var map = new map([[&amp;quot;name&amp;quot;,&amp;quot;张三&amp;quot;]，[&amp;quot;title&amp;quot;,&amp;quot;Author&amp;quot;]]);map.siz">
+<meta name="keywords" content="ES6,温故知新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原型那点事儿(2)">
-<meta property="og:url" content="http://yoursite.com/2018/07/04/原型那点事儿-2/index.html">
+<meta property="og:title" content="ES6知识点梳理(3)">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/ES6知识点梳理-3/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
+<meta property="og:description" content="mapObject提供了“字符串-值”的对应，而map提供了“值-值”的对应，是一种更完善的Hash结构实现。 map可以接受一个数组作为参数，该数组的成员是一个个表示键值对的数组eg:123456var map = new map([[&amp;quot;name&amp;quot;,&amp;quot;张三&amp;quot;]，[&amp;quot;title&amp;quot;,&amp;quot;Author&amp;quot;]]);map.siz">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2018-07-05T08:12:39.254Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531660908337&di=062c9157be2b1c412bac1df6c5ac2394&imgtype=0&src=http%3A%2F%2Fimg2.mukewang.com%2F5a97d4000001d97906000338.jpg">
+<meta property="og:updated_time" content="2018-07-16T16:12:04.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原型那点事儿(2)">
-<meta name="twitter:description" content="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链eg:123456789101112131415Grandpa.prototype.lastName = &amp;quot;James&amp;quot;;function Grandpa()&amp;#123;&amp;#125;var grand = new Grand();Father.prototype = gr">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
+<meta name="twitter:title" content="ES6知识点梳理(3)">
+<meta name="twitter:description" content="mapObject提供了“字符串-值”的对应，而map提供了“值-值”的对应，是一种更完善的Hash结构实现。 map可以接受一个数组作为参数，该数组的成员是一个个表示键值对的数组eg:123456var map = new map([[&amp;quot;name&amp;quot;,&amp;quot;张三&amp;quot;]，[&amp;quot;title&amp;quot;,&amp;quot;Author&amp;quot;]]);map.siz">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531660908337&di=062c9157be2b1c412bac1df6c5ac2394&imgtype=0&src=http%3A%2F%2Fimg2.mukewang.com%2F5a97d4000001d97906000338.jpg">
     
 
     
@@ -144,14 +144,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-原型那点事儿-2" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-ES6知识点梳理-3" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        原型那点事儿(2)
+        ES6知识点梳理(3)
         </h1>
     
 
@@ -161,28 +161,32 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/blog_pro/2018/07/04/原型那点事儿-2/" class="article-date">
-            <time datetime="2018-07-04T09:46:57.000Z" itemprop="datePublished">2018-07-04</time>
+        <a href="/blog_pro/2018/07/16/ES6知识点梳理-3/" class="article-date">
+            <time datetime="2018-07-16T09:42:24.000Z" itemprop="datePublished">2018-07-16</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog_pro/tags/javascript/">javascript</a>, <a class="tag-link" href="/blog_pro/tags/js基础/">js基础</a>, <a class="tag-link" href="/blog_pro/tags/温故知新/">温故知新</a>
+        <a class="tag-link" href="/blog_pro/tags/ES6/">ES6</a>, <a class="tag-link" href="/blog_pro/tags/温故知新/">温故知新</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h5 id="我们知道对象有原型，但细心一点的童鞋会发现，原型还有-proto-属性，这是为啥呢，哈，我们来看看原型链"><a href="#我们知道对象有原型，但细心一点的童鞋会发现，原型还有-proto-属性，这是为啥呢，哈，我们来看看原型链" class="headerlink" title="我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链"></a>我们知道对象有原型，但细心一点的童鞋会发现，原型还有__proto__属性，这是为啥呢，哈，我们来看看原型链</h5><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Grandpa.prototype.lastName = &quot;James&quot;;</span><br><span class="line">function Grandpa()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var grand = new Grand();</span><br><span class="line">Father.prototype = grand;</span><br><span class="line">function Father()&#123;</span><br><span class="line">	this.name = &apos;LeBron&apos;</span><br><span class="line">&#125;</span><br><span class="line">var father = new Father();</span><br><span class="line">Son.prototype = father;</span><br><span class="line">function Son()&#123;</span><br><span class="line">	this.hobby = &quot;smoke&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var son = new Son();</span><br></pre></td></tr></table></figure></p>
-<p>我们打印son.lastName  会显示”James”，当然了，Grandpa.prototype绝不是终点，当我们打印Grandpa.prototype.__proto__时，会发现它指向Object.prototype，Object.prototype是原型链顶层</p>
-<h4 id="Object-create-原型-创建对象"><a href="#Object-create-原型-创建对象" class="headerlink" title="Object.create(原型)创建对象"></a>Object.create(原型)创建对象</h4><p>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">	name: &quot;sunny&quot;,</span><br><span class="line">	age: 123</span><br><span class="line">&#125;;</span><br><span class="line">var obj1 = Object.create(obj);//将原型设为obj，因此obj1就有了name和age属性</span><br></pre></td></tr></table></figure></p>
-<p><em><font color="red">绝大多数</font>对象的最终都会继承自Object.prototype  (√)</em><br>原因：<br><img src="/blog_pro/2018/07/04/原型那点事儿-2/create.png"><br>我们发现()中可以填null，当填入null时，该对象没有原型，__proto__这个属性，如果系统给了，你可以改，如果系统没给，手动添加无效<br><img src="/blog_pro/2018/07/04/原型那点事儿-2/noproto.png"></p>
-<h4 id="关于toString-这个方法"><a href="#关于toString-这个方法" class="headerlink" title="关于toString()这个方法"></a>关于toString()这个方法</h4><p>我们知道不同类型的变量调用toString()这个方法的返回值是不同的<br>1.num <img src="/blog_pro/2018/07/04/原型那点事儿-2/num.png"><br>2.boolean <img src="/blog_pro/2018/07/04/原型那点事儿-2/boo.png"><br>3.object <img src="/blog_pro/2018/07/04/原型那点事儿-2/obj.png"></p>
-<p>以num为例，还原整个过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var num = 123;</span><br><span class="line">//num.toString(); --&gt; new Number(num).toString();此时是在Number原型上找</span><br><span class="line">//Number.prototype.toString = function()&#123;...&#125;  但是吧Number原型上并没有所以就顺着原型链继续找</span><br><span class="line">//Number.prototype.__proto__ = Object.prototype;  此时Object原型上有toString方法了</span><br><span class="line">//但是我们看到了，Obj和num调用toString()方法返回的东西不同，这就说明，Number重写了Object原型上的toString()方法</span><br><span class="line">num.toString();//&quot;123&quot;</span><br></pre></td></tr></table></figure></p>
-<p><font color="red"><em>ps:有一点需要注意的是，document.write()这个方法在调用时，会默认调用toString()方法，因此如果写成如下形式，会报错，因为没有原型的obj没有toString()方法</em></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = Object.creat(null);</span><br><span class="line">document.write(obj);//()中实际上是obj.toString()</span><br></pre></td></tr></table></figure></p>
+            <h4 id="map"><a href="#map" class="headerlink" title="map"></a>map</h4><p>Object提供了“字符串-值”的对应，而map提供了“值-值”的对应，是一种更完善的Hash结构实现。</p>
+<p>map可以接受一个数组作为参数，该数组的成员是一个个表示键值对的数组<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var map = new map([[&quot;name&quot;,&quot;张三&quot;]，[&quot;title&quot;,&quot;Author&quot;]]);</span><br><span class="line">map.size // 2</span><br><span class="line">map.has(&quot;name&quot;); // true</span><br><span class="line">map.get(&quot;name&quot;); // 张三</span><br><span class="line"></span><br><span class="line">//此代码在新建map实例时就指定了两个键(name和title)</span><br></pre></td></tr></table></figure></p>
+<p><font color="red">对同一个键多次赋值，后面的值将覆盖前面的值，若是读取一个未知的值，返回undefined，当然了，只有对同一个对象的引用，map才将其视为同一个键</font><br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var map = new map();</span><br><span class="line">map.set([&apos;a&apos;],555);</span><br><span class="line">map.get([&apos;a&apos;]) // undefined   表面上针对同一个键，实际上是两个值，内存地址不同</span><br></pre></td></tr></table></figure></p>
+<p><strong>如果map的键是一个简单类型的值(数字，字符串，布尔)，则只要求两个值严格相等，map就将其视为一个键，包括0和-0。<font color="red">虽然NaN不严格等于自身，但map将其视为一个值</font></strong></p>
+<h4 id="实例的属性和操作方法"><a href="#实例的属性和操作方法" class="headerlink" title="实例的属性和操作方法"></a>实例的属性和操作方法</h4><p>size属性：返回map结构的成员总数</p>
+<p>1.set(key,value)方法：设置key所在键值，然后返回整个map结构，如果key已经有值，则键值会被更新，否则新生成该键，返回map本身，因此可以使用链式调用<br>2.get(key)方法：读取key对应的键值，若找不到则返回undefined<br>3.has(key)方法返回一个布尔值，表示某个键是否在map数据结构中<br>4.delete(key)方法：删除指定键，成功返回true，反之返回false<br>5.clear()方法：清除所有成员，没有返回值</p>
+<h4 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h4><p>map提供3个遍历器生成函数和1个遍历方法</p>
+<p>keys():返回一个键名的遍历器<br>values():返回一个键值的遍历器<br>entries():返回所有成员的遍历器<br>forEach():遍历map所有成员，与数组的forEach相似，forEach的第一个参数是函数，还可以传第二个参数，用于绑定this</p>
+<h4 id="与其他数据类型的转化"><a href="#与其他数据类型的转化" class="headerlink" title="与其他数据类型的转化"></a>与其他数据类型的转化</h4><p>1.将map转为数组结构<br>     方法：结合使用扩展运算符(…)<br>     结合数组的map方法、filter方法，可以实现map的遍历和过滤(map本身没有map和filter方法)</p>
+<p>2.数组转为map<br>     方法：将数组传入map构造函数</p>
+<p>3.map转为对象<br>     如果map所有键都是字符串，则可以转为对象</p>
 
         </div>
         <footer class="article-footer">
@@ -310,20 +314,10 @@
         
 <nav id="article-nav">
     
-        <a href="/blog_pro/2018/07/13/ES6知识点梳理-1/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            ES6知识点梳理(1)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/blog_pro/2018/07/04/原型那点事儿-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/07/16/ES6知识点梳理-2/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">原型那点事儿(1)</p>
+        <p class="article-nav-title">ES6知识点梳理(2)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -523,7 +517,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/07/04/原型那点事儿-2/';
+    var disqus_url = 'http://yoursite.com/2018/07/16/ES6知识点梳理-3/';
     
     (function() {
     var dsq = document.createElement('script');
