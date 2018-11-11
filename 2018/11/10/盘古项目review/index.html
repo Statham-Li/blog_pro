@@ -21,7 +21,7 @@
 <meta property="og:description" content="总结一下自己的第一个企业级的项目。盘古项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，G">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img0.imgtn.bdimg.com/it/u=1710743589,3298598245&fm=26&gp=0.jpg">
-<meta property="og:updated_time" content="2018-11-10T14:39:45.759Z">
+<meta property="og:updated_time" content="2018-11-11T04:14:52.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="盘古项目review">
 <meta name="twitter:description" content="总结一下自己的第一个企业级的项目。盘古项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，G">
@@ -197,6 +197,14 @@
 <font><strong>其实v-model只是语法糖，双向绑定其实就等于单向绑定+UI时间监听，只不过Vue将过程采用黑箱封装起来了。好处就是方便，数据自动更新。而缺点就是无法得知是哪里更改了数据。</strong></font>
 </blockquote>
 <h5 id="3-处理单选操作"><a href="#3-处理单选操作" class="headerlink" title="3.处理单选操作"></a>3.处理单选操作</h5><p>要用jQuery获得或者修改一组radio很麻烦，需要操作checked属性；而Vue处理radio只需通过数据，数据内容就是radio的value值，修改value值radio就会自动选择目标项。checkbox也是如此，jQuery要使用checked，而Vue只需要知道checkbox绑定的data为true或者false就可以知道checkbox是否被选中。</p>
+<h5 id="4-弹窗上-下一条切换"><a href="#4-弹窗上-下一条切换" class="headerlink" title="4.弹窗上/下一条切换"></a>4.弹窗上/下一条切换</h5><p>弹窗的作用是用来显示点击的某条数据的详情，上/下一条数据切换其中有一个连接点就是该条数据在所有数据中的序列值</p>
+<p><img src="/blog_pro/2018/11/10/盘古项目review/code1.jpg" title="绑定Index"><br><br><img src="/blog_pro/2018/11/10/盘古项目review/code2.jpg" title="点击事件，操作Index"><br><br><img src="/blog_pro/2018/11/10/盘古项目review/code3.jpg" title="操作Index"><br><br><strong><code>如上图所示，我们使用Vue，将targetIndex放到watch中监听，点击左右按钮控制targetIndex值变化并通过$emit触发父组件的方法传递上/下一条数据给弹窗，当targetIndex值变化时由于watch的存在，实时渲染</code></strong></p>
+<p>如果使用jQuery来做基础架构，会变成什么样呢？</p>
+<p>由于jQuery没有<font color="red"><strong>组件化</strong></font>的理念，所以我们的弹窗应该是以一个div的形式使用定位，然后通过控制display来控制显示和消失，所以这样就直接在页面间传值，不需要通过vue的$emit和$on来处理了，这看起来也许简化了操作，但是如果我们有很多页面都使用了弹窗，那么我们就需要在每一个页面中都去写这样一个div会使代码冗长，而且同样的组件不具有复用性，而且每当数据变更的时候，都需要重新去赋值很不方便</p>
+<hr>
+<p><strong><font color="red">ps：由于v-if/v-show的本质也是操作DOM所以就不与jQuery作对比了，v-show是控制display:block/none 而v-if的值如果是false时，会直接把DOM砍掉，开销比v-show要大，所以这两者依情况使用</font></strong></p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p>jQuery完全是通过美元符号来对各种元素进行操作！根据HTML元素的id、name等属性来获取到元素并对其进行取值、赋值、修改属性能行为。 </p>
+<p>Vue的使用过程是：先绘制HTML界面，然后在需要绑定数据的地方写下v-model、v-on等这些绑定属性和方法，在显示数据内容的地方使用双大括号显示内容。然后在Vue中，el属性绑定根视图的id，data属性定义并初始化v-model、双大括号用到的数据和一些其他数据。methods属性定义在v-on中用到的和一些其他方法。更新界面修改数据实现。而修改数据通过操作界面实现。</p>
 
         </div>
         <footer class="article-footer">
