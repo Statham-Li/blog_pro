@@ -21,7 +21,7 @@
 <meta property="og:description" content="总结一下自己的第一个企业级的项目。盘古项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，G">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://img0.imgtn.bdimg.com/it/u=1710743589,3298598245&fm=26&gp=0.jpg">
-<meta property="og:updated_time" content="2018-11-11T04:14:52.357Z">
+<meta property="og:updated_time" content="2018-11-12T07:52:51.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="盘古项目review">
 <meta name="twitter:description" content="总结一下自己的第一个企业级的项目。盘古项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，G">
@@ -186,7 +186,6 @@
 <p>   2.只需要关心数据的变化，数据驱动DOM操作更加简单</p>
 <p>   <strong>MVVM的劣势</strong><br>   无法兼容IE8及以下浏览器</p>
 <h3 id="二、基于盘古项目对两种框架的思考以及痛点分析"><a href="#二、基于盘古项目对两种框架的思考以及痛点分析" class="headerlink" title="二、基于盘古项目对两种框架的思考以及痛点分析"></a>二、基于盘古项目对两种框架的思考以及痛点分析</h3><p>   <em><font color="purple">ps:由于盘古项目是一个后台管理系统，因此涉及到许多新建、复制、删除、数据展示、页面跳转、表单操作等行为，这其中包含了许多数据传递及赋值的过程，我们从这个角度来分析两种架构的优劣。</font></em></p>
-<p>   我们先来看一下本次主要分析的几个需求点(看不清可以点击放大)和交互关系<br>   <strong>第一个列表：AUX规则列表</strong><br>   <img src="/blog_pro/2018/11/10/盘古项目review/changeitems1.jpg" title="需求点AUX"><br>   <strong>第二个列表：引导列表（因为两个列表的交互过程差不多所以拿出我们要分析的交互举例）</strong><br>   <img src="/blog_pro/2018/11/10/盘古项目review/changeitems2.png" title="需求点引导弹窗"><br>   <strong>新建AUX规则</strong><br>   <img src="/blog_pro/2018/11/10/盘古项目review/changeitems3.jpg" title="需求点引导弹窗"></p>
 <h5 id="1-VS-DOM操作"><a href="#1-VS-DOM操作" class="headerlink" title="1.{ { } } VS DOM操作"></a>1.{ { } } VS DOM操作</h5><p>   我们进入到AUX列表页面的时候，在Vue的created生命周期中写了一个函数用来从后台接口中获取列表页的数据，后台给我们吐出来的是一个对象，当我们使用Vue做整体架构的时候只需要在相应的标签内用{ { } }标识我们想渲染的字段就OK了。</p>
 <p><strong><code>&lt;div&gt;{ { data.attr } }&lt;/div&gt;  //data为后台返回的数据，attr为要渲染在该处的属性</code></strong></p>
 <p>   但是，当我们使用jQuery时，我们的过程就繁琐了<br>   ①获取需要操作的DOM对象，一个页面中有许多标签，为了找到唯一的那个我们需要起许多有语义又不同的名字，是不是想想就老阔疼？！<br>   <strong><code>$(&#39; id/class/tagName... &#39;)</code></strong></p>
@@ -198,7 +197,7 @@
 </blockquote>
 <h5 id="3-处理单选操作"><a href="#3-处理单选操作" class="headerlink" title="3.处理单选操作"></a>3.处理单选操作</h5><p>要用jQuery获得或者修改一组radio很麻烦，需要操作checked属性；而Vue处理radio只需通过数据，数据内容就是radio的value值，修改value值radio就会自动选择目标项。checkbox也是如此，jQuery要使用checked，而Vue只需要知道checkbox绑定的data为true或者false就可以知道checkbox是否被选中。</p>
 <h5 id="4-弹窗上-下一条切换"><a href="#4-弹窗上-下一条切换" class="headerlink" title="4.弹窗上/下一条切换"></a>4.弹窗上/下一条切换</h5><p>弹窗的作用是用来显示点击的某条数据的详情，上/下一条数据切换其中有一个连接点就是该条数据在所有数据中的序列值</p>
-<p><img src="/blog_pro/2018/11/10/盘古项目review/code1.jpg" title="绑定Index"><br><br><img src="/blog_pro/2018/11/10/盘古项目review/code2.jpg" title="点击事件，操作Index"><br><br><img src="/blog_pro/2018/11/10/盘古项目review/code3.jpg" title="操作Index"><br><br><strong><code>如上图所示，我们使用Vue，将targetIndex放到watch中监听，点击左右按钮控制targetIndex值变化并通过$emit触发父组件的方法传递上/下一条数据给弹窗，当targetIndex值变化时由于watch的存在，实时渲染</code></strong></p>
+<p><strong><code>我们使用Vue，将targetIndex放到watch中监听，点击左右按钮控制targetIndex值变化并通过$emit触发父组件的方法传递上/下一条数据给弹窗，当targetIndex值变化时由于watch的存在，实时渲染</code></strong></p>
 <p>如果使用jQuery来做基础架构，会变成什么样呢？</p>
 <p>由于jQuery没有<font color="red"><strong>组件化</strong></font>的理念，所以我们的弹窗应该是以一个div的形式使用定位，然后通过控制display来控制显示和消失，所以这样就直接在页面间传值，不需要通过vue的$emit和$on来处理了，这看起来也许简化了操作，但是如果我们有很多页面都使用了弹窗，那么我们就需要在每一个页面中都去写这样一个div会使代码冗长，而且同样的组件不具有复用性，而且每当数据变更的时候，都需要重新去赋值很不方便</p>
 <hr>
