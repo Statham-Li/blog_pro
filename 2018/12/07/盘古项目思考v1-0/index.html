@@ -6,26 +6,26 @@
     
 
     
-    <title>前端算法之二叉树(1) | Statham-Li的Blog</title>
+    <title>盘古项目思考v1.0 | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="算法" />
+        <meta name="keywords" content="新浪,项目" />
     
-    <meta name="description" content="二叉树1.平衡二叉树：任意一个节点其左节点的层数与右节点的层数相差不超过一2.完全二叉树：除了叶子节点 之外每个节点都有两个子节点3.满二叉树：（1） 所有层都是满的（2） 要么没有子节点，有子节点就必须要有两个 eg:平衡二叉树eg:完全二叉树eg:满二叉树 二叉树的描述方式1.前序：首先访问根节点 （ 根-&amp;gt; 左 -&amp;gt; 右）2.中序： 中间访问根节点（ 左-&amp;gt; 根 -&amp;gt;">
-<meta name="keywords" content="算法">
+    <meta name="description" content="object.defineProperty和$set情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示 我们先来看一段代码 我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然">
+<meta name="keywords" content="新浪,项目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端算法之二叉树(1)">
-<meta property="og:url" content="http://yoursite.com/2018/07/18/前端算法之二叉树-1/index.html">
+<meta property="og:title" content="盘古项目思考v1.0">
+<meta property="og:url" content="http://yoursite.com/2018/12/07/盘古项目思考v1-0/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="二叉树1.平衡二叉树：任意一个节点其左节点的层数与右节点的层数相差不超过一2.完全二叉树：除了叶子节点 之外每个节点都有两个子节点3.满二叉树：（1） 所有层都是满的（2） 要么没有子节点，有子节点就必须要有两个 eg:平衡二叉树eg:完全二叉树eg:满二叉树 二叉树的描述方式1.前序：首先访问根节点 （ 根-&amp;gt; 左 -&amp;gt; 右）2.中序： 中间访问根节点（ 左-&amp;gt; 根 -&amp;gt;">
+<meta property="og:description" content="object.defineProperty和$set情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示 我们先来看一段代码 我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531907029086&di=e0477d3c1fa474e8abf5f54188c9a339&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F8435e5dde71190ef42c0ec44c51b9d16fdfa6075.jpg">
-<meta property="og:updated_time" content="2018-07-19T02:35:22.041Z">
+<meta property="og:image" content="http://www.liyuit.com/data/upload/portal/20170731/597e8fdeba5f8.jpg">
+<meta property="og:updated_time" content="2018-12-20T09:48:31.856Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端算法之二叉树(1)">
-<meta name="twitter:description" content="二叉树1.平衡二叉树：任意一个节点其左节点的层数与右节点的层数相差不超过一2.完全二叉树：除了叶子节点 之外每个节点都有两个子节点3.满二叉树：（1） 所有层都是满的（2） 要么没有子节点，有子节点就必须要有两个 eg:平衡二叉树eg:完全二叉树eg:满二叉树 二叉树的描述方式1.前序：首先访问根节点 （ 根-&amp;gt; 左 -&amp;gt; 右）2.中序： 中间访问根节点（ 左-&amp;gt; 根 -&amp;gt;">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531907029086&di=e0477d3c1fa474e8abf5f54188c9a339&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F8435e5dde71190ef42c0ec44c51b9d16fdfa6075.jpg">
+<meta name="twitter:title" content="盘古项目思考v1.0">
+<meta name="twitter:description" content="object.defineProperty和$set情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示 我们先来看一段代码 我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然">
+<meta name="twitter:image" content="http://www.liyuit.com/data/upload/portal/20170731/597e8fdeba5f8.jpg">
     
 
     
@@ -144,14 +144,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-前端算法之二叉树-1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-盘古项目思考v1-0" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        前端算法之二叉树(1)
+        盘古项目思考v1.0
         </h1>
     
 
@@ -161,30 +161,46 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/blog_pro/2018/07/18/前端算法之二叉树-1/" class="article-date">
-            <time datetime="2018-07-18T06:52:35.000Z" itemprop="datePublished">2018-07-18</time>
+        <a href="/blog_pro/2018/12/07/盘古项目思考v1-0/" class="article-date">
+            <time datetime="2018-12-07T09:02:25.000Z" itemprop="datePublished">2018-12-07</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog_pro/tags/算法/">算法</a>
+        <a class="tag-link" href="/blog_pro/tags/新浪/">新浪</a>, <a class="tag-link" href="/blog_pro/tags/项目/">项目</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p>1.平衡二叉树：<font color="red">任意一个节点</font>其左节点的层数与右节点的层数相差不超过一<br>2.完全二叉树：除了叶子节点 之外每个节点都有两个子节点<br>3.满二叉树：<br>（1） 所有层都是满的<br>（2） 要么没有子节点，有子节点就必须要有两个</p>
-<p><strong>eg:平衡二叉树</strong><br><img src="/blog_pro/2018/07/18/前端算法之二叉树-1/phecs.jpg" title="平衡二叉树"><br><strong>eg:完全二叉树</strong><br><img src="/blog_pro/2018/07/18/前端算法之二叉树-1/wqecs.jpg" title="完全二叉树"><br><strong>eg:满二叉树</strong><br><img src="/blog_pro/2018/07/18/前端算法之二叉树-1/wqecs.jpg" title="满二叉树"></p>
-<h4 id="二叉树的描述方式"><a href="#二叉树的描述方式" class="headerlink" title="二叉树的描述方式"></a>二叉树的描述方式</h4><p>1.前序：首先访问根节点 （ 根-&gt; 左 -&gt; 右）<br>2.中序： 中间访问根节点（ 左-&gt; 根 -&gt; 右）<br>3.后序： 最后访问根节点 ( 左-&gt; 右 -&gt; 根）</p>
-<h4 id="代码构造二叉树"><a href="#代码构造二叉树" class="headerlink" title="代码构造二叉树"></a>代码构造二叉树</h4><h6 id="1-菜鸟写法"><a href="#1-菜鸟写法" class="headerlink" title="1.菜鸟写法"></a>1.菜鸟写法</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">function Node(data, left, right) &#123;</span><br><span class="line">          this.data = data;</span><br><span class="line">          this.left = left;</span><br><span class="line">          this.right = right;</span><br><span class="line">      &#125;</span><br><span class="line">      function setTree() &#123;</span><br><span class="line">          var root = new Node(1, null, null);</span><br><span class="line">          var node1 = new Node(2, null, null);</span><br><span class="line">          var node2 = new Node(3, null, null);</span><br><span class="line">          var node3 = new Node(4, null, null);</span><br><span class="line">          var node4 = new Node(5, null, null);</span><br><span class="line">          var node5 = new Node(6, null, null);</span><br><span class="line">          var node6 = new Node(7, null, null);</span><br><span class="line">          root.left = node1;</span><br><span class="line">          root.right = node2;</span><br><span class="line">          node1.left = node3;</span><br><span class="line">          node1.right = node4;</span><br><span class="line">          node2.left = node5;</span><br><span class="line">          node2.right = node6;</span><br><span class="line">          return root;</span><br><span class="line">      &#125;</span><br><span class="line">      var tree = setTree();</span><br></pre></td></tr></table></figure>
-<p>这样写确实通俗易懂，但是实现起来所占空间实在是不敢恭维，所以我们是不是有什么办法，用更少的空间存储二叉树呢</p>
-<h6 id="2-进阶写法"><a href="#2-进阶写法" class="headerlink" title="2.进阶写法"></a>2.进阶写法</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function pre(node) &#123;            //传入一棵树</span><br><span class="line">          if (node == null) &#123;</span><br><span class="line">              return ;</span><br><span class="line">          &#125;</span><br><span class="line">          pre(node.left);    //  使用递归  pre(node.left)-&gt;打印node.left的data值</span><br><span class="line">          pre(node.right);   //  现在所看到的这个程序执行  左-&gt;右-&gt;根  的顺序，后序遍历</span><br><span class="line">          console.log(node.data);</span><br><span class="line">      &#125;</span><br><span class="line">pre(tree);</span><br></pre></td></tr></table></figure>
-<h4 id="根据前序-中序遍历、后序-中序遍历确定一棵二叉树"><a href="#根据前序-中序遍历、后序-中序遍历确定一棵二叉树" class="headerlink" title="根据前序/中序遍历、后序/中序遍历确定一棵二叉树"></a>根据前序/中序遍历、后序/中序遍历确定一棵二叉树</h4><p>为了方便，我们先把三种遍历方式的顺序写出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var pre = [1,2,4,5,3,6];  //前序</span><br><span class="line">var mid = [4,2,5,1,3,6];  //中序</span><br><span class="line">var aft = [4,5,2,6,3,1];  //后序</span><br></pre></td></tr></table></figure></p>
-<p>1.前序/中序遍历<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">function perMid(pre, mid) &#123;</span><br><span class="line">           if(pre.length == 0 || mid.length == 0) &#123;</span><br><span class="line">               return null;</span><br><span class="line">           &#125;</span><br><span class="line">           if (pre.length != mid.length) &#123;</span><br><span class="line">               throw Error(&apos;参数不正确&apos;)</span><br><span class="line">           &#125;</span><br><span class="line">           // 根节点数据</span><br><span class="line">           var rootData = pre[0];</span><br><span class="line">           // 根节点在中序遍历中的位置</span><br><span class="line">           var midRootIndex = mid.indexOf(rootData);</span><br><span class="line">           // 左子树中序遍历</span><br><span class="line">           var leftMid = mid.slice(0, midRootIndex);    //截取中序数组根节点之前的为左子树</span><br><span class="line">           // 右子树中序遍历</span><br><span class="line">           var rightMid = mid.slice(midRootIndex + 1);    //截取中序数组根节点之后的为右子树</span><br><span class="line">           // 左子树前序遍历</span><br><span class="line">           var leftPre = pre.slice(1, leftMid.length + 1);    /*截取前序数组：第一项是根节点所以从第二项开始截取，截取长度为左子树节点个数</span><br><span class="line">                                                              所以截取到leftMid.length + 1的位置(slice不含下标为leftMid.length + 1)*/</span><br><span class="line">            // 右子树前序遍历</span><br><span class="line">           var rightPre = pre.slice(leftMid.length + 1);    //从leftMid.length + 1的位置开始截取，到最后</span><br><span class="line">           // 左子树还原</span><br><span class="line">           var left = perMid(leftPre, leftMid);    //递归，传入左子树的前、中序遍历</span><br><span class="line">           // 右子树还原</span><br><span class="line">           var right = perMid(rightPre, rightMid);    //同上</span><br><span class="line">           </span><br><span class="line">           // 最终二叉树</span><br><span class="line">           var node = new Node(pre[0], left, right);</span><br><span class="line">           return node;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
-<p>2.后序/中序遍历<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">function afterMid(aft, mid) &#123;</span><br><span class="line">          if(aft.length == 0 || mid.length == 0) &#123;</span><br><span class="line">              return null;</span><br><span class="line">          &#125;</span><br><span class="line">          if (aft.length != mid.length) &#123;</span><br><span class="line">              throw Error(&apos;参数不正确&apos;)</span><br><span class="line">          &#125;</span><br><span class="line">          // 根节点数据</span><br><span class="line">          var rootData = aft[aft.length - 1];</span><br><span class="line">          // 根节点在中序遍历中的位置</span><br><span class="line">          var midRootIndex = mid.indexOf(rootData);</span><br><span class="line">          // 左子树中序遍历</span><br><span class="line">          var leftMid = mid.slice(0, midRootIndex);</span><br><span class="line">          // 右子树中序遍历</span><br><span class="line">          var rightMid = mid.slice(midRootIndex + 1);</span><br><span class="line">          // 左子树后序遍历</span><br><span class="line">          var leftAft = aft.slice(0, leftMid.length);</span><br><span class="line">           // 右子树后序遍历</span><br><span class="line">          var rightaft = aft.slice(leftMid.length, aft.length - 1);</span><br><span class="line">          // 左子树还原</span><br><span class="line">          var left = afterMid(leftAft, leftMid);</span><br><span class="line">          // 右子树还原</span><br><span class="line">          var right = afterMid(rightaft, rightMid);</span><br><span class="line">          </span><br><span class="line">          // 最终二叉树</span><br><span class="line">          var node = new Node(aft[aft.length - 1], left, right);</span><br><span class="line">          return node;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></p>
+            <h1 id="object-defineProperty和-set"><a href="#object-defineProperty和-set" class="headerlink" title="object.defineProperty和$set"></a>object.defineProperty和$set</h1><p>情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示</p>
+<p><em>我们先来看一段代码</em><br><img src="/blog_pro/2018/12/07/盘古项目思考v1-0/1.jpg"></p>
+<font color="red">我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然后把数组中的每一项赋给新的数组，在这里说个前提，数组中的每一项都是<b>基本数据类型</b></font>
+
+<p><strong>用红色框起来的部分是两种写法，一种是最普通的’=’赋值，还有一种是vue里边的$set，当我们使用’=’赋值的时候我们可以打印出新的对象(_newform)已经被正确赋值，但是在页面中并没有显示，而使用$set赋值的时候，新对象不仅被正确赋值，页面也会正常响应，这是为什么呢？</strong></p>
+<h5 id="vue-响应式"><a href="#vue-响应式" class="headerlink" title="vue 响应式"></a>vue 响应式</h5><p>当你把一个普通的JavaScript对象传给Vue实例的data选项，Vue将遍历此对象所有的属性，并使用Object.defineProperty把这些属性全部转为getter/setter。Object.defineProperty 是 ES5 中一个无法 shim 的特性，这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器。</p>
+<p>这些getter/setter对用户来说是不可见的，但是在内部他们让vue追踪依赖，在属性被访问和修改时通知变化。每个组件实例都有相应的watcher实例对象，它会在组建渲染的过程中把属性记录为依赖，之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。</p>
+<h5 id="对象更改检测"><a href="#对象更改检测" class="headerlink" title="对象更改检测"></a>对象更改检测</h5><p>在一个组件实例中，只有在data里初始化的数据才是响应的，Vue不能检测到对象属性的添加或删除，没有在data里声明的属性不是响应的。</p>
+<p>Vue不允许在已经创建的实例上动态添加根级响应式属性，但是可以使用$set方法将相应属性添加到嵌套的对象上。</p>
+<p>这里需要提到js原生的方法<code>Object.defineProperty()</code></p>
+<p>官方文档对该方法的解释是：Object.defineProperty()方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象。<br><img src="/blog_pro/2018/12/07/盘古项目思考v1-0/2.jpg"><br><em>我们主要说一下<code>description</code>这个参数</em></p>
+<p>description是属性描述符，具有以下几个可选值</p>
+<h5 id="configurable"><a href="#configurable" class="headerlink" title="configurable"></a>configurable</h5><p>当且仅当该属性的 configurable 为 true 时，该属性描述符才能够被改变，同时该属性也能从对应的对象上被删除。默认为 false。</p>
+<h5 id="enumerable"><a href="#enumerable" class="headerlink" title="enumerable"></a>enumerable</h5><p>当且仅当该属性的enumerable为true时，该属性才能够出现在对象的枚举属性中。默认为 false。<br>数据描述符同时具有以下可选键值：</p>
+<h5 id="value"><a href="#value" class="headerlink" title="value"></a>value</h5><p>该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认为 undefined。</p>
+<h5 id="writable"><a href="#writable" class="headerlink" title="writable"></a>writable</h5><p>当且仅当该属性的writable为true时，value才能被赋值运算符改变。默认为 false。<br>存取描述符同时具有以下可选键值：</p>
+<h5 id="get"><a href="#get" class="headerlink" title="get"></a>get</h5><p>一个给属性提供 getter 的方法，如果没有 getter 则为 undefined。当访问该属性时，该方法会被执行，方法执行时没有参数传入，但是会传入this对象（由于继承关系，这里的this并不一定是定义该属性的对象）。<br>默认为 undefined。</p>
+<h5 id="set"><a href="#set" class="headerlink" title="set"></a>set</h5><p>一个给属性提供 setter 的方法，如果没有 setter 则为 undefined。当属性值修改时，触发执行该方法。该方法将接受唯一参数，即该属性新的参数值。<br>默认为 undefined。</p>
+<p><font color="red">我们直接采用’=’赋值相当于把configurable enumerable writable都赋值为true</font><br><img src="/blog_pro/2018/12/07/盘古项目思考v1-0/3.jpg"></p>
+<h1 id="set-1"><a href="#set-1" class="headerlink" title="$set"></a>$set</h1><p><em>先上源码 vue-&gt;src-&gt;core-&gt;observer-&gt;index.js(201-231)</em><br><img src="/blog_pro/2018/12/07/盘古项目思考v1-0/4.jpg"></p>
+<p>先进行一个判断，判断target不是undefined、null、string、number、symbol、boolean类型的数据。</p>
+<p>1.如果target是一个数组，那么根据key值及数组长度更改数组的长度(取其中较大者)，然后直接使用splice函数修改数组，虽然vue没有监听数组变化，但是监听了数组的push,pop,shift,unshift,splice,sort,reverse函数，所以使用splice也可以达到更新dom的目的</p>
+<p>2.如果target是一个对象，且key是对象已存在的私有属性，那么直接赋值就可以了，因为这个key必然是被监听过的</p>
+<p>3.如果这个key目前没有存在于对象中，那么会进行赋值并监听。这里省略了ob的判断，那么ob是什么呢，vue中初始化的数据(比如data中的数据)在页面初始化的时候都会被监听，而被监听的属性都会被绑定__ob__属性，这里就是判断这个数据有没有被监听的。如果这个数据没有被监听，那么就默认你不想监听这个数据，所以直接赋值并返回</p>
+<p><strong><font color="#f40">综上所述：我们使用’=’直接赋值可以读写新的对象，但是由于在已经创建的实例上无法动态添加根级响应式属性，所以会有数据改变但是vue无法监听的情况出现<br></font></strong></p>
 
         </div>
         <footer class="article-footer">
@@ -296,20 +312,10 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
 <nav id="article-nav">
     
-        <a href="/blog_pro/2018/07/20/ES6知识点梳理-6/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            ES6知识点梳理(6)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/blog_pro/2018/07/18/ES6知识点梳理-5/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/11/10/盘古项目review/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">ES6知识点梳理(5)</p>
+        <p class="article-nav-title">盘古项目review</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -509,7 +515,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/07/18/前端算法之二叉树-1/';
+    var disqus_url = 'http://yoursite.com/2018/12/07/盘古项目思考v1-0/';
     
     (function() {
     var dsq = document.createElement('script');
