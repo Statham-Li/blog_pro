@@ -6,26 +6,26 @@
     
 
     
-    <title>前端算法之二叉树打印 | Statham-Li的Blog</title>
+    <title>项目review | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="算法" />
+        <meta name="keywords" content="项目" />
     
-    <meta name="description" content="二叉树打印按层遍历的方式对二叉树进行序列化1.用队列来进行二叉树的按层遍历，及宽度优先遍历2.除了访问节点的顺序是按层遍历之外，对结果字符串的处理，与之前的处理方式一样 二叉树按层遍历1.针对二叉树的宽度优先遍历2.宽度优先遍历常使用队列结构 eg:给定一棵二叉树的头结点head，按如下格式打印    要求打印成：    1    23    456    78  思路：使用两个变量 last和n">
-<meta name="keywords" content="算法">
+    <meta name="description" content="总结一下自己的第一个企业级的项目。本次的项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，">
+<meta name="keywords" content="项目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端算法之二叉树打印">
-<meta property="og:url" content="http://yoursite.com/2018/08/06/前端算法之二叉树打印/index.html">
+<meta property="og:title" content="项目review">
+<meta property="og:url" content="http://yoursite.com/2018/11/10/项目review/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="二叉树打印按层遍历的方式对二叉树进行序列化1.用队列来进行二叉树的按层遍历，及宽度优先遍历2.除了访问节点的顺序是按层遍历之外，对结果字符串的处理，与之前的处理方式一样 二叉树按层遍历1.针对二叉树的宽度优先遍历2.宽度优先遍历常使用队列结构 eg:给定一棵二叉树的头结点head，按如下格式打印    要求打印成：    1    23    456    78  思路：使用两个变量 last和n">
+<meta property="og:description" content="总结一下自己的第一个企业级的项目。本次的项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531907029086&di=e0477d3c1fa474e8abf5f54188c9a339&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F8435e5dde71190ef42c0ec44c51b9d16fdfa6075.jpg">
-<meta property="og:updated_time" content="2018-08-06T03:07:47.803Z">
+<meta property="og:image" content="http://www.liyuit.com/data/upload/portal/20170731/597e8fdeba5f8.jpg">
+<meta property="og:updated_time" content="2018-12-21T06:50:43.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端算法之二叉树打印">
-<meta name="twitter:description" content="二叉树打印按层遍历的方式对二叉树进行序列化1.用队列来进行二叉树的按层遍历，及宽度优先遍历2.除了访问节点的顺序是按层遍历之外，对结果字符串的处理，与之前的处理方式一样 二叉树按层遍历1.针对二叉树的宽度优先遍历2.宽度优先遍历常使用队列结构 eg:给定一棵二叉树的头结点head，按如下格式打印    要求打印成：    1    23    456    78  思路：使用两个变量 last和n">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1531907029086&di=e0477d3c1fa474e8abf5f54188c9a339&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F8435e5dde71190ef42c0ec44c51b9d16fdfa6075.jpg">
+<meta name="twitter:title" content="项目review">
+<meta name="twitter:description" content="总结一下自己的第一个企业级的项目。本次的项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 vue + vue-cli3 + ElementUI，同时我们也试想如果用Bootstrap + jQuery做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。 一、两种技术的差别1.jQuery在2018年的7月25日，">
+<meta name="twitter:image" content="http://www.liyuit.com/data/upload/portal/20170731/597e8fdeba5f8.jpg">
     
 
     
@@ -144,14 +144,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-前端算法之二叉树打印" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-项目review" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        前端算法之二叉树打印
+        项目review
         </h1>
     
 
@@ -161,31 +161,49 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/blog_pro/2018/08/06/前端算法之二叉树打印/" class="article-date">
-            <time datetime="2018-08-06T01:58:43.000Z" itemprop="datePublished">2018-08-06</time>
+        <a href="/blog_pro/2018/11/10/项目review/" class="article-date">
+            <time datetime="2018-11-10T08:55:56.000Z" itemprop="datePublished">2018-11-10</time>
         </a>
     </div>
 
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog_pro/tags/算法/">算法</a>
+        <a class="tag-link" href="/blog_pro/tags/项目/">项目</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h4 id="二叉树打印"><a href="#二叉树打印" class="headerlink" title="二叉树打印"></a>二叉树打印</h4><p><strong>按层遍历的方式对二叉树进行序列化</strong><br>1.用队列来进行二叉树的按层遍历，及宽度优先遍历<br>2.除了访问节点的顺序是按层遍历之外，对结果字符串的处理，与之前的处理方式一样</p>
-<h4 id="二叉树按层遍历"><a href="#二叉树按层遍历" class="headerlink" title="二叉树按层遍历"></a>二叉树按层遍历</h4><p>1.针对二叉树的宽度优先遍历<br>2.宽度优先遍历常使用队列结构</p>
-<font color="red"><strong>eg:给定一棵二叉树的头结点head，按如下格式打印</strong></font><br><img src="/blog_pro/2018/08/06/前端算法之二叉树打印/ecseg.png"><br><font color="red"><br>    要求打印成：<br>    1<br><br>    23<br><br>    456<br><br>    78<br><br></font>
-
-<p>思路：使用两个变量 last和nlast记录，和一个队列queue<br>last表示正在打印的当前行的最右节点<br>nlast表示下一行的最右节点<br>令nlast为每行新元素，就能保证nlast指向当前行最右元素</p>
-<p><em>个人理解：开始时，last指向头节点，头节点加入queue，弹出，然后开始遍历子节点，并弹出，子节点遍历完，检验last是否和爹一样，若不一样则继续遍历下一个爹的子节点，直到找到和last指向相同的爹，此时，last指向该爹的小儿子（最后找到的子节点），这时，上一轮的儿子，变为下一轮遍历的爹，继续遍历，直到全部打印完</em></p>
-<p><strong>二叉树的序列化和反序列化</strong><br>1.二叉树-&gt;字符串(序列化)<br>2.字符串-&gt;二叉树(反序列化)</p>
-<p><strong>序列化方式</strong><br>1.根据先序遍历序列化<br>2.根据中序遍历序列化<br>3.根据后序遍历序列化<br>4.按层序列化</p>
-<p>思路:(先序为例)<br>1.假设序列化结果为str，初始时str为空字符串<br>2.先序遍历二叉树时如果遇到空节点，在str末尾加上”#!”<br>3.如果遇到不为空的节点，假设节点值为3，就在str末尾加上”3!”<br><em>ps：如果不用特殊符号表示值的结束，则这两棵树的序列化结果为：123###  会产生歧义</em></p>
-<p>反序列化：与序列化相反<br>ps:<br>1.选择什么样的遍历方式序列化，就用什么方式反序列化<br>2.一棵树序列化结果是唯一的，唯一的结果生成的二叉树也是唯一的</p>
+            <p>总结一下自己的第一个企业级的项目。<br>本次的项目是一个后台管理系统，分为两个列表，两个新建还有七个模板，目的为了创建并管理AUX规则和引导。技术栈是 <code>vue + vue-cli3 + ElementUI</code>，同时我们也试想如果用<code>Bootstrap + jQuery</code>做为技术选型，两者之间的差距是什么，接下来就说一说我自己对两种技术架构之间的理解。</p>
+<h3 id="一、两种技术的差别"><a href="#一、两种技术的差别" class="headerlink" title="一、两种技术的差别"></a>一、两种技术的差别</h3><h4 id="1-jQuery"><a href="#1-jQuery" class="headerlink" title="1.jQuery"></a>1.jQuery</h4><p><span>在2018年的7月25日，Github宣布GitHub前端已经彻底删除jQuery依赖,并全部依赖原生API。我们可以说jQuery过时了，但是过时不代表你就一定不可以再用，或者要从现有项目中清除抛弃掉。项目维护和管理本身是另一回事情，并不是完全由技术因素决定的。</span></p>
+<p>   <b>jQuery的优势</b><br>   1.链式调用<br>   2.浏览器兼容性好<br>   3.强大的选择器，可以使用css选择器、标签等获取到想操作的元素</p>
+<p>   <b>jQuery的劣势</b><br>   1.操作DOM，钩子会依赖标签，如果改变页面结构，很多依赖标签的选择器，一改起来js的部分就得跟着大改<br>   2.不能向后兼容。每一个新版本不能兼容早期的版本。举例来说，有些新版本不再支持某些selector，新版jQuery却没有保留对它们的支持，而只是简单的将其移除。这可能会影响到开发者已经编写好的代码或插件。<br>   3.对数据的处理有很多不便利的地方，容易导致高耦合度</p>
+<h4 id="2-Vue"><a href="#2-Vue" class="headerlink" title="2.Vue"></a>2.Vue</h4><p>   不同于jQuery，Vue用的是MVVM的架构模式，即Model-View-ViewModel 模式。让我一句话总结MVVM就是：数据驱动DOM（无需操作DOM）。MVVM 最标志性的特性就是<font color="red">数据绑定</font>，MVVM 的核心理念就是<font color="red">通过声明式的数据绑定来实现 View 层和其他层的分离</font>。一张图来直观的解释一下MVVM的关系。<br>   <img src="/blog_pro/2018/11/10/项目review/MVVM.jpg" title="MVVM"></p>
+<p><strong><code>我们在 View 层的视图模板中声明 数据绑定、 事件绑定后，在 ViewModel 中进行业务逻辑的数据处理。事件触发后，ViewModel 中数据变更， View层自动更新。因为 MVVM 框架的引入，我们只需关注业务逻辑的数据变更，MVVM 的视图引擎会帮你搞定 View。因为数据驱动，一切变得更加简单。</code></strong></p>
+<p>   <strong>MVVM的优势</strong><br>   1.增加视图引擎和数据存取器，视图引擎会在我们改变页面上所依赖数据的时候触发视图的更新。而数据存储器可以通过<code>Object.defineProperty()</code>方法来定义数据，以此来完成对数据的监听、数据变更时通知更新，是数据绑定实现的基础。</p>
+<p>   2.只需要关心数据的变化，数据驱动DOM操作更加简单</p>
+<p>   <strong>MVVM的劣势</strong><br>   无法兼容IE8及以下浏览器</p>
+<h3 id="二、基于项目对两种框架的思考以及痛点分析"><a href="#二、基于项目对两种框架的思考以及痛点分析" class="headerlink" title="二、基于项目对两种框架的思考以及痛点分析"></a>二、基于项目对两种框架的思考以及痛点分析</h3><p>   <em><font color="purple">ps:由于本次的项目是一个后台管理系统，因此涉及到许多新建、复制、删除、数据展示、页面跳转、表单操作等行为，这其中包含了许多数据传递及赋值的过程，我们从这个角度来分析两种架构的优劣。</font></em></p>
+<h5 id="1-VS-DOM操作"><a href="#1-VS-DOM操作" class="headerlink" title="1.{ { } } VS DOM操作"></a>1.{ { } } VS DOM操作</h5><p>   我们进入到列表页面的时候，在Vue的created生命周期中写了一个函数用来从后台接口中获取列表页的数据，后台给我们吐出来的是一个对象，当我们使用Vue做整体架构的时候只需要在相应的标签内用{ { } }标识我们想渲染的字段就OK了。</p>
+<p><strong><code>&lt;div&gt;{ { data.attr } }&lt;/div&gt;  //data为后台返回的数据，attr为要渲染在该处的属性</code></strong></p>
+<p>   但是，当我们使用jQuery时，我们的过程就繁琐了<br>   ①获取需要操作的DOM对象，一个页面中有许多标签，为了找到唯一的那个我们需要起许多有语义又不同的名字，是不是想想就老阔疼？！<br>   <strong><code>$(&#39; id/class/tagName... &#39;)</code></strong></p>
+<p>   ②把数据塞到元素里<br>   <strong><code>$(&#39; id/class/tagName... &#39;).html(data.attr)</code></strong></p>
+<h5 id="2-v-model优化表单-input事件绑定"><a href="#2-v-model优化表单-input事件绑定" class="headerlink" title="2.v-model优化表单 input事件绑定"></a>2.v-model优化表单 input事件绑定</h5><p>① 初始化页面时先在Vue实例中声明一个变量，它包含所有表单的字段及初始值，同时深拷贝一个作为备份，用于提交表单后对表单内容进行重置；</p>
+<p>② 将上述提到的变量中的表单字段与页面中的输入框绑定好，之后当用户填完表单时，借助 v-model 的双向绑定变量的值也相应会自动整理妥当。待要上传时直接通过序号从变量中调取相应表单的数据提交即可。</p>
+<blockquote>
+<font><strong>其实v-model只是语法糖，双向绑定其实就等于单向绑定+UI时间监听，只不过Vue将过程采用黑箱封装起来了。好处就是方便，数据自动更新。而缺点就是无法得知是哪里更改了数据。</strong></font>
+</blockquote>
+<h5 id="3-处理单选操作"><a href="#3-处理单选操作" class="headerlink" title="3.处理单选操作"></a>3.处理单选操作</h5><p>要用jQuery获得或者修改一组radio很麻烦，需要操作checked属性；而Vue处理radio只需通过数据，数据内容就是radio的value值，修改value值radio就会自动选择目标项。checkbox也是如此，jQuery要使用checked，而Vue只需要知道checkbox绑定的data为true或者false就可以知道checkbox是否被选中。</p>
+<h5 id="4-弹窗上-下一条切换"><a href="#4-弹窗上-下一条切换" class="headerlink" title="4.弹窗上/下一条切换"></a>4.弹窗上/下一条切换</h5><p>弹窗的作用是用来显示点击的某条数据的详情，上/下一条数据切换其中有一个连接点就是该条数据在所有数据中的序列值</p>
+<p><strong><code>我们使用Vue，将targetIndex放到watch中监听，点击左右按钮控制targetIndex值变化并通过$emit触发父组件的方法传递上/下一条数据给弹窗，当targetIndex值变化时由于watch的存在，实时渲染</code></strong></p>
+<p>如果使用jQuery来做基础架构，会变成什么样呢？</p>
+<p>由于jQuery没有<font color="red"><strong>组件化</strong></font>的理念，所以我们的弹窗应该是以一个div的形式使用定位，然后通过控制display来控制显示和消失，所以这样就直接在页面间传值，不需要通过vue的$emit和$on来处理了，这看起来也许简化了操作，但是如果我们有很多页面都使用了弹窗，那么我们就需要在每一个页面中都去写这样一个div会使代码冗长，而且同样的组件不具有复用性，而且每当数据变更的时候，都需要重新去赋值很不方便</p>
+<hr>
+<p><strong><font color="red">ps：由于v-if/v-show的本质也是操作DOM所以就不与jQuery作对比了，v-show是控制display:block/none 而v-if的值如果是false时，会直接把DOM砍掉，开销比v-show要大，所以这两者依情况使用</font></strong></p>
+<h5 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h5><p>jQuery完全是通过美元符号来对各种元素进行操作！根据HTML元素的id、name等属性来获取到元素并对其进行取值、赋值、修改属性能行为。 </p>
+<p>Vue的使用过程是：先绘制HTML界面，然后在需要绑定数据的地方写下v-model、v-on等这些绑定属性和方法，在显示数据内容的地方使用双大括号显示内容。然后在Vue中，el属性绑定根视图的id，data属性定义并初始化v-model、双大括号用到的数据和一些其他数据。methods属性定义在v-on中用到的和一些其他方法。更新界面修改数据实现。而修改数据通过操作界面实现。</p>
 
         </div>
         <footer class="article-footer">
@@ -297,20 +315,20 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
 <nav id="article-nav">
     
-        <a href="/blog_pro/2018/08/09/jQuery回顾-2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/12/07/项目思考v1-0/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            jQuery回顾(2)
+            项目思考v1.0
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/blog_pro/2018/07/20/ES6知识点梳理-6/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blog_pro/2018/10/22/填坑系列之git操作/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">ES6知识点梳理(6)</p>
+        <p class="article-nav-title">填坑系列之git操作</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -510,7 +528,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/08/06/前端算法之二叉树打印/';
+    var disqus_url = 'http://yoursite.com/2018/11/10/项目review/';
     
     (function() {
     var dsq = document.createElement('script');
