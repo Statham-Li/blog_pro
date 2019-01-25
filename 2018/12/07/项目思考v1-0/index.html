@@ -21,7 +21,7 @@
 <meta property="og:description" content="object.defineProperty和$set情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示 我们先来看一段代码 我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.liyuit.com/data/upload/portal/20170731/597e8fdeba5f8.jpg">
-<meta property="og:updated_time" content="2018-12-21T07:05:59.083Z">
+<meta property="og:updated_time" content="2019-01-25T06:56:34.008Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目思考v1.0">
 <meta name="twitter:description" content="object.defineProperty和$set情景：页面1的数据接口中返回所需要使用的字段叫’form’，页面2的数据接口中返回所需要使用的字段叫’tempData’，form和tempData内容相同且为数组类型(Array)，但是组件1同时被页面1和页面2使用，此时需要做数据转化，以便数据可以在组件中正常展示 我们先来看一段代码 我们都知道引用类型的数据是不能直接赋值的，需要循环遍历，然">
@@ -189,7 +189,7 @@
 <p>官方文档对该方法的解释是：Object.defineProperty()方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象。<br><img src="/blog_pro/2018/12/07/项目思考v1-0/2.jpg"><br><em>我们主要说一下<code>description</code>这个参数</em></p>
 <p><strong>数据描述符和存取描述符均具有以下可选键值</strong></p>
 <h5 id="configurable"><a href="#configurable" class="headerlink" title="configurable"></a>configurable</h5><p>当且仅当该属性的 configurable 为 true 时，该属性描述符才能够被改变，同时该属性也能从对应的对象上被删除。默认为 false。</p>
-<h5 id="enumerable"><a href="#enumerable" class="headerlink" title="enumerable"></a>enumerable</h5><p>当且仅当该属性的enumerable为true时，该属性才能够出现在对象的枚举属性中。默认为 false。<br>数据描述符同时具有以下可选键值：</p>
+<h5 id="enumerable"><a href="#enumerable" class="headerlink" title="enumerable"></a>enumerable</h5><p>当且仅当该属性的enumerable为true时，该属性才能够出现在对象的枚举属性中。默认为 false。<br><strong>数据描述符同时具有以下可选键值：</strong></p>
 <h5 id="value"><a href="#value" class="headerlink" title="value"></a>value</h5><p>该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。默认为 undefined。</p>
 <h5 id="writable"><a href="#writable" class="headerlink" title="writable"></a>writable</h5><p>当且仅当该属性的writable为true时，value才能被赋值运算符改变。默认为 false。</p>
 <p><strong>存取描述符同时具有以下可选键值：</strong></p>

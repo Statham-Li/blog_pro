@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="温故知新,javascript,js基础" />
     
-    <meta name="description" content="引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接下来">
+    <meta name="description" content="一、引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接">
 <meta name="keywords" content="温故知新,javascript,js基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你不知道的JavaScript——理解作用域">
 <meta property="og:url" content="http://yoursite.com/2019/01/22/你不知道的JavaScript——理解作用域/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
-<meta property="og:description" content="引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接下来">
+<meta property="og:description" content="一、引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2019-01-22T11:23:00.597Z">
+<meta property="og:updated_time" content="2019-01-25T09:53:17.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你不知道的JavaScript——理解作用域">
-<meta name="twitter:description" content="引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接下来">
+<meta name="twitter:description" content="一、引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
     
 
@@ -176,7 +176,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>首先看一个最简单的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = 2;</span><br></pre></td></tr></table></figure></p>
+            <h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><p>首先看一个最简单的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = 2;</span><br></pre></td></tr></table></figure></p>
 <p>开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有<font color="red">两个完全不同</font>的声明，我们把这两个声明过程分解。</p>
 <p><strong>step1：</strong> <strong>var a</strong>，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a</p>
 <p><strong>step2:</strong>  接下来编译器会为引擎生成运行时所需的代码，这些代码被用来处理<strong>a = 2</strong>这个赋值操作。引擎运行时会首先询问作用域，在当前作用域集合中是否存在一个叫做a的变量。如果是，引擎就会使用这个变量；如果不是，引擎会继续查找该变量；<br>如果引擎找到了变量a就将2赋值给它。否则引擎会抛出异常。</p>
@@ -187,6 +187,10 @@
 <p>这里对a是一个RHS引用，因为a并没有被赋值，而我们只是想取得a的值，这样才能传递给console.log();</p>
 <p>相比之下a = 2对a的引用则是属于LHS的，因为我们希望把=2这个操作加到a身上</p>
 <p><strong>引用一个书上的小测验，找出其中的LHS部分和RHS部分</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function foo(a) &#123;</span><br><span class="line">	var b = a;</span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br><span class="line">var c = foo(2);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line">	LHS部分：①在var c = foo(2)这一步，很明显的一个赋值语句，c=属于一个LHS</span><br><span class="line">		②在foo函数内部一个隐式的形参 a = 属于一个LHS</span><br><span class="line">		③在foo函数作用域内 var b = a;又一个明显的赋值语句，b=属于一个LHS</span><br><span class="line">	RHS部分：①在 var c = foo(2)处，我们需要知道foo(2)的值，再将其赋值给c，</span><br><span class="line">		 因此= foo(2)是一个RHS</span><br><span class="line">		②在var b = a处，我们需要知道a的值是多少，因此= a是一个RHS</span><br><span class="line">		③④在return a + b处，我们分别需要知道a和b的值，因此这里有两个RHS</span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<h4 id="关于LHS和RHS的异常"><a href="#关于LHS和RHS的异常" class="headerlink" title="关于LHS和RHS的异常"></a>关于LHS和RHS的异常</h4><p>你也许会问我们为什么要关心两种不同编译方式的异常，，，Because这两种查询的行为是不一样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo(a) &#123;</span><br><span class="line">	console.log(a + b);</span><br><span class="line">	b = a;</span><br><span class="line">&#125;</span><br><span class="line">foo(2);</span><br></pre></td></tr></table></figure>
+<p>b在RHS查询过程中是无法找到的，因为没有被声明，此时，在所有嵌套的作用域中遍寻不到所需的变量，引擎就会抛出<font color="red"><strong>ReferenceError</strong></font>异常<br>相比之下，LHS查询过程会自动创建一个变量（非严格模式下），并将其返还给引擎</p>
+<p>ps: 严格模式下会禁止隐式或自动创建全局变量，导致LHS查询同样会报<font color="red"><strong>ReferenceError</strong></font>异常</p>
 
         </div>
         <footer class="article-footer">
