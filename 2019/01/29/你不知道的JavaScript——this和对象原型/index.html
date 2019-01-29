@@ -6,17 +6,26 @@
     
 
     
-    <title>归档: 2018/10 | Statham-Li的Blog</title>
+    <title>你不知道的JavaScript——this和对象原型 | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Statham-Li的Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/10/index.html">
+        <meta name="keywords" content="温故知新,javascript,js基础,U dont Know" />
+    
+    <meta name="description" content="一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &amp;#123;	console.log(&amp;quot;foo: &amp;quot;+ num);	//记录foo被调用的次数	this.count++;&amp;#125;foo.count = 0;var i;for (i = 0; i&amp;lt;10; i++) &amp;#123">
+<meta name="keywords" content="温故知新,javascript,js基础,U dont Know">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你不知道的JavaScript——this和对象原型">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/你不知道的JavaScript——this和对象原型/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
+<meta property="og:description" content="一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &amp;#123;	console.log(&amp;quot;foo: &amp;quot;+ num);	//记录foo被调用的次数	this.count++;&amp;#125;foo.count = 0;var i;for (i = 0; i&amp;lt;10; i++) &amp;#123">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
+<meta property="og:updated_time" content="2019-01-29T09:51:36.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Statham-Li的Blog">
+<meta name="twitter:title" content="你不知道的JavaScript——this和对象原型">
+<meta name="twitter:description" content="一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &amp;#123;	console.log(&amp;quot;foo: &amp;quot;+ num);	//记录foo被调用的次数	this.count++;&amp;#125;foo.count = 0;var i;for (i = 0; i&amp;lt;10; i++) &amp;#123">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
     
 
     
@@ -131,122 +140,107 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档: 2018/10
+    未分类
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-你不知道的JavaScript——this和对象原型" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog_pro/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2018/10/22/填坑系列之git操作/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540221335852&di=d386b6ca26aaffaeaf642de6ec4180cd&imgtype=0&src=http%3A%2F%2Fimages.cnblogs.com%2Fcnblogs_com%2Fxingxia%2F1197628%2Fo_git.jpg)" alt="填坑系列之git操作" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/10/22/填坑系列之git操作/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-10-22T09:35:49.000Z" itemprop="datePublished">2018-10-22</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2018/10/22/填坑系列之git操作/">填坑系列之git操作</a>
+        你不知道的JavaScript——this和对象原型
         </h1>
     
 
-        <p class="article-excerpt">
-            前言   以前都是写些个人demo或者文章，实习之后发现，那些只是冰山一角。今天hin尴尬，提交代码的时候把develop分支冲掉了，所以下定决心好好学一下多人开发的流程，好好填坑。
-一.创建本地仓库   创建一个本地仓库(文件夹),将该文件夹初始化为git仓库，即在该文件夹下点击鼠标右键(git bash here),然后使用  git init  命令，这样，初始化仓库就建好了 
-   
-二.
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/blog_pro/2019/01/29/你不知道的JavaScript——this和对象原型/" class="article-date">
+            <time datetime="2019-01-29T06:47:21.000Z" itemprop="datePublished">2019-01-29</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2018/10/12/Vuex学习-1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539325584134&di=8992449fc90852825eb22fee0c02aa49&imgtype=0&src=http%3A%2F%2Fp1.so.qhimgs1.com%2Ft01b97c1053874b6b31.jpg)" alt="Vuex学习(1)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/10/12/Vuex学习-1/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog_pro/tags/U-dont-Know/">U dont Know</a>, <a class="tag-link" href="/blog_pro/tags/javascript/">javascript</a>, <a class="tag-link" href="/blog_pro/tags/js基础/">js基础</a>, <a class="tag-link" href="/blog_pro/tags/温故知新/">温故知新</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
             </div>
-            <div class="date"><time datetime="2018-10-12T03:36:13.000Z" itemprop="datePublished">2018-10-12</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2018/10/12/Vuex学习-1/">Vuex学习(1)</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h4 id="一、误区"><a href="#一、误区" class="headerlink" title="一、误区"></a>一、误区</h4><p><strong>1. this指向自身</strong><br>思考以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function foo(num) &#123;</span><br><span class="line">	console.log(&quot;foo: &quot;+ num);</span><br><span class="line"></span><br><span class="line">	//记录foo被调用的次数</span><br><span class="line">	this.count++;</span><br><span class="line">&#125;</span><br><span class="line">foo.count = 0;</span><br><span class="line">var i;</span><br><span class="line">for (i = 0; i&lt;10; i++) &#123;</span><br><span class="line">	if (i&lt;5) &#123;</span><br><span class="line">		foo(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// foo: 6</span><br><span class="line">// foo: 7</span><br><span class="line">// foo: 8</span><br><span class="line">// foo: 9</span><br><span class="line"></span><br><span class="line">// foo被调用了多少次？</span><br><span class="line">console.log(foo.count); // 0 ？？？？</span><br></pre></td></tr></table></figure></p>
+<p>console.log()确实输出了4句，但是最终打印出来的还是0，显然字面意思理解的this是错误的。</p>
+<font color="red"><strong>真实原因是这段代码创建了一个全局变量count，它的值为NaN，具体解释后边会写</strong></font>
 
-        <p class="article-excerpt">
-            什么是Vuex   官网上以一个计数应用为例123456789101112131415161718new Vue(&#123;  // state  data () &#123;    return &#123;      count: 0    &#125;  &#125;,  // view  template: `    &lt;div&gt;&#123;&#123; count &#125
-        </p>
+<p>当一个函数对象内部引用自身，只使用this是不够的。一般需要一个指向函数对象的词法标识符(变量)来引用它。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">	foo.count = 4; // foo指向本身</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">setTimeout( function ()&#123;</span><br><span class="line">	// 匿名函数无法指向自身</span><br><span class="line">&#125;, 10)</span><br></pre></td></tr></table></figure></p>
+<font color="purple"><em>ps:曾经有(唯一)一种方法可以让匿名函数内部引用自身——arguments.callee，目前该方法被弃用</em></font>
+
+<p>如果想实现我们预期的效果，我们可以使用词法作用域，将count变为一个已知对象的属性然后在函数内部使用，并打印输出，但这种方法回避了this的问题，我们不深究</p>
+<!-- **************************************************************************************************** -->
+<p>另一种方法是使用call方法，改变this指向</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -299,6 +293,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog_pro/2019/01/22/你不知道的JavaScript——理解作用域/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">你不知道的JavaScript——理解作用域</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -493,11 +500,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2019/01/29/你不知道的JavaScript——this和对象原型/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
