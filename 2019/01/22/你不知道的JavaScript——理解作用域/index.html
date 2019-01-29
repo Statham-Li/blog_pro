@@ -21,7 +21,7 @@
 <meta property="og:description" content="一、引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2019-01-28T11:36:54.397Z">
+<meta property="og:updated_time" content="2019-01-29T03:15:30.765Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你不知道的JavaScript——理解作用域">
 <meta name="twitter:description" content="一、引言首先看一个最简单的例子1var a = 2; 开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。 step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a step2:  接">
@@ -199,8 +199,9 @@
 <p>首先说5个6是怎么来的，由于终止条件是i不再&lt;=5，因此当i=6时第一次满足了这个条件，所以会输出i的最终值6；延迟函数的回调在<span style="font-size: 12px;color: #fff;background: #f60;border-radius: 8px;padding: 2px;">循环结束时</span>才执行，因此每次输出一个6。</p>
 <p><em><font color="purple">Q:问题是到底为什么导致他的行为和语义所暗示的不一致？</font></em></p>
 <p><font color="#f60"><strong>A:</strong></font>我们试图假设循环中的每个迭代在运行时都会给自己”捕获”一个i的副本。但是由于作用域的工作原理，实际情况是尽管循环中的5个函数是在各个迭代中分别定义的，但是它们被封闭在一个共享的全局作用域中，因此实际上只有一个i，所有函数共享一个i的引用</p>
-<p>我们默认你已经知道了立即执行函数的概念(IIFE)，通过声明并立即执行来创建作用域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 1; i&lt;=5; i++)&#123;</span><br><span class="line">	(function() &#123;</span><br><span class="line">		setTimeout(function timer()&#123;</span><br><span class="line">			console.log(i);</span><br><span class="line">			&#125;, i*1000);</span><br><span class="line">		&#125;)();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>你觉得这样就行了？？？exo me ？？？连自己的变量都没有，还不是共用一个i</p>
+<p>我们默认你已经知道了立即执行函数的概念(IIFE)，通过声明并立即执行来创建作用域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 1; i&lt;=5; i++)&#123;</span><br><span class="line">	(function() &#123;</span><br><span class="line">		setTimeout(function timer()&#123;</span><br><span class="line">			console.log(i);</span><br><span class="line">		&#125;, i*1000);</span><br><span class="line">	&#125;)();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>你觉得这样就行了？？？exo me ？？？连自己的变量都没有，还不是共用一个i，正确的打开方式是这样的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (var i=1; i&lt;=5; i++) &#123;</span><br><span class="line">	(function(j) &#123;</span><br><span class="line">		setTimeout(function timer() &#123;</span><br><span class="line">			console.log(j);</span><br><span class="line">		&#125;, j*1000);</span><br><span class="line">	&#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>关于块级作用域的一点注意：for循环头部的let声明还会有一个特殊的行为。这个行为指出变量在循环过程中不止被声明一次，每次迭代都会声明。随后的每个迭代都会使用上一个迭代结束时的值来初始化这个变量</p>
 
         </div>
         <footer class="article-footer">
