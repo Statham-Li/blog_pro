@@ -21,7 +21,7 @@
 <meta property="og:description" content="一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &amp;#123;	console.log(&amp;quot;foo: &amp;quot;+ num);	//记录foo被调用的次数	this.count++;&amp;#125;foo.count = 0;var i;for (i = 0; i&amp;lt;10; i++) &amp;#123">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
-<meta property="og:updated_time" content="2019-01-30T03:47:32.963Z">
+<meta property="og:updated_time" content="2019-01-30T06:50:13.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你不知道的JavaScript——this和对象原型">
 <meta name="twitter:description" content="一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &amp;#123;	console.log(&amp;quot;foo: &amp;quot;+ num);	//记录foo被调用的次数	this.count++;&amp;#125;foo.count = 0;var i;for (i = 0; i&amp;lt;10; i++) &amp;#123">
@@ -189,7 +189,7 @@
 <p><strong>2. 它的作用域</strong><br>大部分人认为this指向函数作用域，确实在某种情况下它是正确的，但是在其他情况下是错误的。需要明确的是<span style="border-radius: 6px;background: #f40;font-size: 12px;padding: 5px;color: #fff;font-weight: bolder;">this在任何情况下都不指向函数的词法作用域</span>。作用域“对象”([[scope]])无法通过JavaScript代码访问，它存在于JS引擎内部</p>
 <font color="purple"><em>this到底是什么呢？</em></font>
 
-<p>this是在运行时绑定的，并不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式</p>
+<p>this是在运行时绑定的，并不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。当一个函数被调用时，会创建一个活动记录(执行上下文)。这个记录会包含在哪里被调用(调用栈)、函数的调用方式、传入的参数等信息。this就是这个记录的一个属性，会在函数执行的过程中用到。</p>
 
         </div>
         <footer class="article-footer">
