@@ -6,17 +6,26 @@
     
 
     
-    <title>归档: 2019/1 | Statham-Li的Blog</title>
+    <title>eventloop和error异步捕获 | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Statham-Li的Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/01/index.html">
+        <meta name="keywords" content="javascript,js基础" />
+    
+    <meta name="description" content="Event Loop先来看一张图： 图1 via 掘金小册:前端面试之道by yck左边被黄色虚线框起来的部分叫做函数执行栈，我们可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则。 图2 via 掘金小册:前端面试之道by yck当我们在执行JS代码的时候会将所要执行的函数放到执行栈中，遇到异步代码会被挂起并在需要执行的时候加入到其所在的任务队列中(microtask微任务 || m">
+<meta name="keywords" content="javascript,js基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="eventloop和error异步捕获">
+<meta property="og:url" content="http://yoursite.com/2019/11/13/eventloop和error异步捕获/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
+<meta property="og:description" content="Event Loop先来看一张图： 图1 via 掘金小册:前端面试之道by yck左边被黄色虚线框起来的部分叫做函数执行栈，我们可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则。 图2 via 掘金小册:前端面试之道by yck当我们在执行JS代码的时候会将所要执行的函数放到执行栈中，遇到异步代码会被挂起并在需要执行的时候加入到其所在的任务队列中(microtask微任务 || m">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
+<meta property="og:updated_time" content="2019-11-13T15:09:39.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Statham-Li的Blog">
+<meta name="twitter:title" content="eventloop和error异步捕获">
+<meta name="twitter:description" content="Event Loop先来看一张图： 图1 via 掘金小册:前端面试之道by yck左边被黄色虚线框起来的部分叫做函数执行栈，我们可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则。 图2 via 掘金小册:前端面试之道by yck当我们在执行JS代码的时候会将所要执行的函数放到执行栈中，遇到异步代码会被挂起并在需要执行的时候加入到其所在的任务队列中(microtask微任务 || m">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg">
     
 
     
@@ -131,122 +140,105 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档: 2019/1
+    未分类
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-eventloop和error异步捕获" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog_pro/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2019/01/29/你不知道的JavaScript——this和对象原型/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg)" alt="你不知道的JavaScript——this和对象原型" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2019/01/29/你不知道的JavaScript——this和对象原型/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2019-01-29T06:47:21.000Z" itemprop="datePublished">2019-01-29</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2019/01/29/你不知道的JavaScript——this和对象原型/">你不知道的JavaScript——this和对象原型</a>
+        eventloop和error异步捕获
         </h1>
     
 
-        <p class="article-excerpt">
-            一、误区1. this指向自身思考以下代码123456789101112131415161718192021function foo(num) &#123;	console.log(&quot;foo: &quot;+ num);	//记录foo被调用的次数	this.count++;&#125;foo.count = 0;var i;for (i = 0; i&lt;10; i++) &#123
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/blog_pro/2019/11/13/eventloop和error异步捕获/" class="article-date">
+            <time datetime="2019-11-13T14:53:30.000Z" itemprop="datePublished">2019-11-13</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2019/01/22/你不知道的JavaScript——理解作用域/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528359645467&di=92020cde3ce394bf4d6bec41290fb1b9&imgtype=0&src=http%3A%2F%2Fs3.51cto.com%2Fwyfs02%2FM01%2FA6%2F4E%2FwKioL1nMcZOwZmOrAAAs1tdSqmI073.jpg-wh_651x-s_508622004.jpg)" alt="你不知道的JavaScript——理解作用域" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2019/01/22/你不知道的JavaScript——理解作用域/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog_pro/tags/javascript/">javascript</a>, <a class="tag-link" href="/blog_pro/tags/js基础/">js基础</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
             </div>
-            <div class="date"><time datetime="2019-01-22T03:35:18.000Z" itemprop="datePublished">2019-01-22</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2019/01/22/你不知道的JavaScript——理解作用域/">你不知道的JavaScript——理解作用域</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h4 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h4><p>先来看一张图：<br><img src="/blog_pro/2019/11/13/eventloop和error异步捕获/eventloop.png"></p>
+<p></p><p style="text-align: center;font-size:12px;color:#666">图1 via 掘金小册:前端面试之道by yck</p><br>左边被黄色虚线框起来的部分叫做函数执行栈，我们可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则。<br><img src="/blog_pro/2019/11/13/eventloop和error异步捕获/callbackstack.gif"><p></p>
+<p></p><p style="text-align: center;font-size:12px;color:#666">图2 via 掘金小册:前端面试之道by yck</p><br>当我们在执行JS代码的时候会将所要执行的函数放到执行栈中，遇到异步代码会被挂起并在需要执行的时候加入到其所在的任务队列中(microtask微任务 || macrotask宏任务)，一旦执行栈为空，Event Loop 会从任务队列中取出需要执行的方法放入执行栈中执行，所以<span style="color:red">JS 中的异步还是同步行为。</span><br><br><br><br><br>图1右边部分是宏任务和微任务队列<br><br>宏任务和微任务都有哪些？<br><br><span style="color:red">宏任务</span>包括 script ， setTimeout ，setInterval ，setImmediate ，I/O ，UI rendering。<br><br><span style="color:red">微任务</span>包括 process.nextTick ，promise ，MutationObserver，其中 process.nextTick 为 Node 独有。<br><img src="/blog_pro/2019/11/13/eventloop和error异步捕获/task.png"><p></p>
+<p></p><p style="text-align: center;font-size:12px;color:#666">图3 via 思否专栏:10分钟理解JS引擎的执行机制by Ziwei</p><br>这里很多人会有个误区，认为微任务快于宏任务，其实是错误的。因为宏任务中包括了 script ，浏览器会先执行一个宏任务，接下来有异步代码的话才会先执行微任务。<br>个人理解如下：<br><img src="/blog_pro/2019/11/13/eventloop和error异步捕获/taskRelation.png"><p></p>
+<h4 id="JS捕获异步错误"><a href="#JS捕获异步错误" class="headerlink" title="JS捕获异步错误"></a>JS捕获异步错误</h4><p>由于JS是单线程的，所以，我们平时使用的try catch无法捕获到当前循环外的错误。异步任务由 eventloop 加入任务队列，并取出入栈(js 主进程执行栈)执行，而当异步任务取出执行的时候， 执行栈已经退出了，也就是上下文环境已经改变，所以无法捕获异步任务的错误。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 宏任务</span><br><span class="line">const task = () =&gt; &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">        throw new Error(&apos;async error&apos;)</span><br><span class="line">    &#125;, 1000)</span><br><span class="line">&#125;</span><br><span class="line">// 主任务</span><br><span class="line">function main() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        task();</span><br><span class="line">    &#125; catch(e) &#123;</span><br><span class="line">        console.log(e, &apos;err&apos;)</span><br><span class="line">        console.log(&apos;continue...&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 微任务</span><br><span class="line">const promiseFetch = () =&gt; </span><br><span class="line">    new Promise((resolve) =&gt; &#123;</span><br><span class="line">    resolve();</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line">function main() &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">    // 回调函数里抛出错误</span><br><span class="line">        promiseFetch().then(() =&gt; &#123;</span><br><span class="line">            throw new Error(&apos;err&apos;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125; catch(e) &#123;</span><br><span class="line">        console.log(e, &apos;eeee&apos;);</span><br><span class="line">        console.log(&apos;continue&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>并不是回调函数无法 try catch，而是要看这个回调函数是否和主函数在同一个事件循环中</em><br>关于promise.catch<br>promise 内部的无论是 reject 或者 throw new Error，都可以通过 promise.catch 回调捕获。</p>
+<p>这里要跟我们最开始微任务的栗子区分，promise 的微任务指的是 then 的回调，而此处是 Promise 构造函数传入的第一个参数，new Promise 是同步执行的。</p>
 
-        <p class="article-excerpt">
-            一、引言首先看一个最简单的例子1var a = 2;
-开始，我们会以为这只是一个声明，但是事实并不是这样的，JS引擎认为这里有两个完全不同的声明，我们把这两个声明过程分解。
-step1： var a，编译器会询问作用域是否已经有一个该名称的变量存在于同一个作用域的集合中。如果是，编译器会忽略该声明，继续进行编译；否则它会要求作用域在当前作用域的集合中声明一个新的变量，并命名为a
-step2:  接
-        </p>
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -299,6 +291,19 @@ step2:  接
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog_pro/2019/11/13/git-权限设置（ssh）/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">git 权限设置（ssh）</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -493,11 +498,13 @@ step2:  接
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2019/11/13/eventloop和error异步捕获/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
