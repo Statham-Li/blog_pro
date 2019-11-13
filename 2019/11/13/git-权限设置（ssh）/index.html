@@ -6,17 +6,26 @@
     
 
     
-    <title>标签：: 网络协议 | Statham-Li的Blog</title>
+    <title>git 权限设置（ssh） | Statham-Li的Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Statham-Li的Blog">
-<meta property="og:url" content="http://yoursite.com/tags/网络协议/index.html">
+        <meta name="keywords" content="git" />
+    
+    <meta name="description" content="git权限设置 背景  入职后换了新电脑，使用SSH URLS的方式clone项目，由于没有将新生成的SSH秘钥添加到gitlab的配置中，导致项目拉取不成功，根据报错信息，了解到是权限问题。 以本人github为例，复现报错信息首先复制ssh仓库地址  随便clone一个项目，报错   Git权限校验的两种方式 1️⃣HTTPS  仔细看第一幅图，不难发现除了ssh，在Clone or down">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 权限设置（ssh）">
+<meta property="og:url" content="http://yoursite.com/2019/11/13/git-权限设置（ssh）/index.html">
 <meta property="og:site_name" content="Statham-Li的Blog">
+<meta property="og:description" content="git权限设置 背景  入职后换了新电脑，使用SSH URLS的方式clone项目，由于没有将新生成的SSH秘钥添加到gitlab的配置中，导致项目拉取不成功，根据报错信息，了解到是权限问题。 以本人github为例，复现报错信息首先复制ssh仓库地址  随便clone一个项目，报错   Git权限校验的两种方式 1️⃣HTTPS  仔细看第一幅图，不难发现除了ssh，在Clone or down">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540221335852&di=d386b6ca26aaffaeaf642de6ec4180cd&imgtype=0&src=http%3A%2F%2Fimages.cnblogs.com%2Fcnblogs_com%2Fxingxia%2F1197628%2Fo_git.jpg">
+<meta property="og:updated_time" content="2019-11-13T14:36:15.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Statham-Li的Blog">
+<meta name="twitter:title" content="git 权限设置（ssh）">
+<meta name="twitter:description" content="git权限设置 背景  入职后换了新电脑，使用SSH URLS的方式clone项目，由于没有将新生成的SSH秘钥添加到gitlab的配置中，导致项目拉取不成功，根据报错信息，了解到是权限问题。 以本人github为例，复现报错信息首先复制ssh仓库地址  随便clone一个项目，报错   Git权限校验的两种方式 1️⃣HTTPS  仔细看第一幅图，不难发现除了ssh，在Clone or down">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540221335852&di=d386b6ca26aaffaeaf642de6ec4180cd&imgtype=0&src=http%3A%2F%2Fimages.cnblogs.com%2Fcnblogs_com%2Fxingxia%2F1197628%2Fo_git.jpg">
     
 
     
@@ -131,123 +140,125 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>标签：: <em>网络协议</em>
+    未分类
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-git-权限设置（ssh）" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blog_pro/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2018/06/17/网络协议-2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://wx2.sinaimg.cn/bmiddle/c5131475ly1frn927fzxjj20dw0afq31.jpg)" alt="网络协议(2)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/06/17/网络协议-2/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
-            </div>
-            <div class="date"><time datetime="2018-06-17T03:18:31.000Z" itemprop="datePublished">2018-06-17</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2018/06/17/网络协议-2/">网络协议(2)</a>
+        git 权限设置（ssh）
         </h1>
     
 
-        <p class="article-excerpt">
-            IP是怎么来的，又是怎么没的？1.如何配置IP地址　　如果有相关的知识的积累，我们就会知道，使用命令行，我们可以手动配置IP地址，使用ipconfig或者ip addr 。那么有一个问题是，自己配置的自由度太大了，难道真的配置什么都可以吗？？？，如果设置一个完全不搭边的地址呢？比如旁边的机器是192.168.1.x,我非要配置16.158.23.6会有什么现象呢？　　答案是不会出现任何现象，只不过
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/blog_pro/2019/11/13/git-权限设置（ssh）/" class="article-date">
+            <time datetime="2019-11-13T14:22:54.000Z" itemprop="datePublished">2019-11-13</time>
+        </a>
     </div>
-</article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blog_pro/2018/06/09/网络协议-1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://wx2.sinaimg.cn/bmiddle/c5131475ly1frn927fzxjj20dw0afq31.jpg)" alt="网络协议(1)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/06/09/网络协议-1/">0</span>
-    
-</span>
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog_pro/tags/git/">git</a>
+    </div>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            
             </div>
-            <div class="date"><time datetime="2018-06-09T06:40:34.000Z" itemprop="datePublished">2018-06-09</time></div>
-        </div>
         
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blog_pro/2018/06/09/网络协议-1/">网络协议(1)</a>
-        </h1>
-    
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="git权限设置"><a href="#git权限设置" class="headerlink" title="git权限设置"></a>git权限设置</h2><hr>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>  入职后换了新电脑，使用<span style="display:inline-block;border-radius:5px;background:#f60;color:#fff;">SSH URLS</span>的方式clone项目，由于没有将新生成的SSH秘钥添加到gitlab的配置中，导致项目拉取不成功，根据报错信息，了解到是权限问题。</p>
+<p><em><span style="color:#999">以本人github为例，复现报错信息</span></em><br>首先复制ssh仓库地址<br><img src="/blog_pro/2019/11/13/git-权限设置（ssh）/sshclone.jpg"><br>  随便clone一个项目，报错<br>  <img src="/blog_pro/2019/11/13/git-权限设置（ssh）/errorInfo.jpg"></p>
+<h4 id="Git权限校验的两种方式"><a href="#Git权限校验的两种方式" class="headerlink" title="Git权限校验的两种方式"></a>Git权限校验的两种方式</h4><ul>
+<li><h5 id="1️⃣HTTPS"><a href="#1️⃣HTTPS" class="headerlink" title="1️⃣HTTPS"></a>1️⃣HTTPS</h5><p>  仔细看第一幅图，不难发现除了ssh，在<span style="display:inline-block;border-radius:3px;background:#2e9c47;color:white;padding: 3px;border:0.5px solid #000">Clone or download</span>按钮下还有<span style="color:#166dd9">Use HTTPS</span>字样。该种方式适用面更广（即使在有防火墙或代理的情况下也同样适用），使用更方便（配置更简单）。</p>
+<p>  采用HTTPS URLs地址<code>clone/fetch/pull/push</code>仓库时，事先无需对本地系统进行任何配置，只需要输入GitHub的账号和密码即可。不过如果每次都要手动输入账号密码，在Mac系统中，在启用<code>Keychain</code>机制的情况下，首次输入GitHub账号密码后，认证信息就会自动保存到系统的<code>Keychain</code>中，下次再次访问仓库时就会自动读取<code>Keychain</code>中保存的认证信息。关于HTTPS的部分不作为本次重点内容。</p>
+</li>
+<li><h5 id="2️⃣SSH"><a href="#2️⃣SSH" class="headerlink" title="2️⃣SSH"></a>2️⃣SSH</h5><p>  我们重点说SSH的部分，在使用SSH URLS的方式之前，我们需要生成SSH秘钥对（分为私钥和公钥）<br>  <code>ssh-keygen</code>指令用于创建、管理和转换认证SSH秘钥对，有两种类型<span style="display:inline-block;border-radius:5px;background:#f60;color:#fff;">RSA和DSA</span>，其实是两种不同加密算法得出的不同秘钥，创建的指令为<br>  <code>ssh-keygen -t rsa -b 4096 -C “xxx@xxxx.com”</code></p>
+<blockquote>
+<p>-t: type的缩写，用来指定秘钥类型(rsa/dsa)后边跟rsa就是创建rsa类型<br>  -b: bit的缩写，对于RSA密钥，最小要求768位，默认是2048位。命令中的4096指的是RSA密钥长度为4096位。DSA密钥必须恰好是1024位<br>  -C “邮箱”: comment的缩写，-C表示要提供一个新注释，用于识别这个密钥，所以“”里面不一定非要填邮箱，可以是任何内容，邮箱仅仅是识别用的key<br>总结：当你创建ssh的时候：-t 表示密钥的类型 ，-b表示密钥的长度，-C 用于识别这个密钥的注释 ，这个注释你可以输入任何内容，很多网站和软件用这个注释作为密钥的名字</p>
+</blockquote>
+<p>  秘钥对创建好以后，私钥存放于本地计算机（~/.ssh/id_rsa），将公钥（~/.ssh/id_rsa.pub）中的内容添加至GitHub账户。<br>  <code>cat id_rsa.pub</code>指令用于查看ssh秘钥，我们需要查看的是公钥，所以使用cat查看文件命令查看结尾有.pub的那一个文件，把公钥拷贝到git配置中再次拉取项目，成功！</p>
+<blockquote>
+<p>ps:检测本地计算机与GitHub的连接状态，会发现系统仍提示权限校验失败。</p>
+<img src="/blog_pro/2019/11/13/git-权限设置（ssh）/denied.jpg">
+</blockquote>
+<p><br><br><span style="color:red">Tips:</span><br>  单独采用秘钥的时候，秘钥的保存很关键，一旦这个私钥被别人拷走，就像别人配了一把你家的钥匙，可以随便进出，所以在创建秘钥的过程中，系统还建议创建一个名为passphrase的东西。只有同时具备SSH private key和passphrase的情况下，才能通过SSH的权限校验，这就大大地增加了安全性。当然，这个passphrase也不是必须的，在创建秘钥对时也可以不设置passphrase。</p>
+  <img src="/blog_pro/2019/11/13/git-权限设置（ssh）/passphrase.jpg">
+</li>
+</ul>
+<p><br><br>  SSH提供两种方式的登录验证：</p>
+<p>  1、密码（口令）验证：以服务器中本地系统用户的登录名称，密码进行验证。<br>  2、密钥对验证：要求提供相匹配的秘钥信息才能通过验证。通常先在客户机中创建一对密钥文件(公钥和私钥)，然后将公钥文件放到服务器中的指定位置。</p>
+<p>  密码（口令）验证的整个过程是：<br>（1）远程主机收到用户的登录请求，把自己的公钥发给用户。<br>（2）用户使用这个公钥，将登录密码加密后，发送回来。<br>（3）远程主机用自己的私钥，解密登录密码，如果密码正确，就同意用户登录。<br>（感觉类似于三次握手？！🤷‍）<br><img src="/blog_pro/2019/11/13/git-权限设置（ssh）/steps.jpg"><br>  <br><br>  git主要使用密钥对验证，该方法的过程是：<br>  （1） 首先在客户端生成一对密钥（ssh-keygen）；<br>  （2） 并将客户端的公钥ssh-copy-id 拷贝到服务端；<br>  （3） 当客户端再次发送一个连接请求，包括ip、用户名；<br>  （4） 服务端得到客户端的请求后，会到authorized_keys中查找，如果有响应的IP和用户，就会随机生成一个字符串，例如：qwer；<br>  （5） 服务端将使用客户端拷贝过来的公钥进行加密，然后发送给客户端；<br>（6） 得到服务端发来的消息后，客户端会使用私钥进行解密，然后将解密后的字符串发送给服务端；<br>（7） 服务端接受到客户端发来的字符串后，跟之前的字符串进行对比，如果一致，就允许免密码登录。<br></p>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a><span style="color:#999;">Question</span></h3><p>1.ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> 检验的意义？<br>2.ssh-agent的作用？</p>
+<ol start="3">
+<li>密码（口令）验证过程？</li>
+</ol>
+<p>参考链接：<br><a href="https://debugtalk.com/post/head-first-git-authority-verification/" target="_blank" rel="noopener">debugtalk的博客</a><br><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html" target="_blank" rel="noopener">阮一峰的博客</a><br><a href="https://www.cnblogs.com/hukey/p/6248468.html" target="_blank" rel="noopener">https://www.cnblogs.com/hukey/p/6248468.html</a></p>
 
-        <p class="article-excerpt">
-            最近阅读了几篇不错的文章，谈一谈自己的感想，仅代表个人观点，若有不对的地方，欢迎各位指正
-　　首先抛出一个问题，网络协议是什么？　　我们都知道，计算机很聪明，聪明到知道海量的知识，但同时它又很笨，笨到只认识0和1，我们人类要想与计算机沟通，需要一段文字把我们与计算机紧密结合起来，这段文字就是一种协议，只有通过这种协议，计算机才知道我们想让它做什么  
-　　
-1.协议三要素
-1.语法，就是这一段内容
-        </p>
+        </div>
+        <footer class="article-footer">
+            
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -300,6 +311,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog_pro/2019/01/29/你不知道的JavaScript——this和对象原型/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">你不知道的JavaScript——this和对象原型</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -494,11 +518,13 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2019/11/13/git-权限设置（ssh）/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
